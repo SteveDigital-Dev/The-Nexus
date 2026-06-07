@@ -103,7 +103,7 @@
 
 | Vessel | PROJECTS.md | REPOS.md | PAPERS.md | SERVICES.md |
 |--------|------------|---------|----------|------------|
-| claudia | — | — | — | ✅ `system/SERVICES.md` |
+| claudia | ✅ `system/PROJECTS.md` | ✅ `system/REPOS.md` | ✅ `system/PAPERS.md` | ✅ `system/SERVICES.md` |
 | sdigits | ❌ missing | ❌ missing | ❌ missing | ❌ missing |
 | thoth | ❌ missing | ❌ missing | ❌ missing | ❌ missing |
 | nirto5-1 | ❌ missing | ❌ missing | ❌ missing | ❌ missing |
