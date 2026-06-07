@@ -1,5 +1,5 @@
 # Fleet Standard
-**Established:** 2026-06-06 | **Updated:** 2026-06-07
+**Established:** 2026-06-06 | **Updated:** 2026-06-07 (added vessel index requirement)
 
 Living document. Defines structure, naming conventions, contribution rules, and protocols for the XO fleet.
 
@@ -16,6 +16,61 @@ Living document. Defines structure, naming conventions, contribution rules, and 
 | XO custom models | `XO_<Base><Variant>` | `XO_Gemma_31B`, `XO_MedGemma_4B` |
 | Vessel docs | `profile.json` + `system/` | `fleet-ops/claudia/profile.json` |
 | Fleet protocols | `FLEET_<NAME>.md` in fleet-ops root | `FLEET_FORK_PROTOCOL.md` |
+
+---
+
+## Vessel Index Requirement ⚠️ Fleet Rule
+
+Every vessel **must** maintain a `system/` directory in `fleet-ops/<vessel>/system/` containing:
+
+| File | Required | Contents |
+|------|----------|---------|
+| `PROJECTS.md` | **mandatory** | All in-house projects and their status |
+| `REPOS.md` | **mandatory** | All git repos checked out on this vessel, with purpose |
+| `PAPERS.md` | **mandatory** | Paper catalog with RAG coverage status |
+| `SERVICES.md` | recommended | Running services, ports, LaunchAgents/systemd units |
+| `OLLAMA_MODELS.md` | recommended | Full model inventory |
+| `STORAGE.md` | recommended | Disk topology and mount points |
+
+### PROJECTS.md minimum format
+
+```markdown
+# <Vessel> — Projects
+**Updated:** YYYY-MM-DD
+
+| Project | Path | Status | Description |
+|---------|------|--------|-------------|
+| my-project | ~/path/to/project | active | What it does |
+```
+
+### REPOS.md minimum format
+
+```markdown
+# <Vessel> — Repos
+**Updated:** YYYY-MM-DD
+
+| Repo | Path | Remote | Branch | Notes |
+|------|------|--------|--------|-------|
+| repo-name | ~/path | github.com/... | main | purpose |
+```
+
+### PAPERS.md minimum format
+
+```markdown
+# <Vessel> — Papers
+**Updated:** YYYY-MM-DD | Total: N | RAG coverage: N%
+
+| Collection | Count | Topic |
+|-----------|-------|-------|
+| local | N | NICE/NIH guidelines |
+```
+
+### Enforcement
+
+- Index files must be updated when projects/repos/papers change
+- Indexes feed `The-Nexus/indexes/` — the Nexus pulls from these, not the other way around
+- Vessels without indexes are considered **undocumented** and cannot be referenced in Nexus indexes accurately
+- Current undocumented vessels: **sdigits**, **thoth**, **nirto5-1**, **mintbookpro** (all missing `PROJECTS.md` and `REPOS.md`)
 
 ---
 

@@ -97,6 +97,22 @@
 
 ---
 
+---
+
+## Index Coverage Status
+
+| Vessel | PROJECTS.md | REPOS.md | PAPERS.md | SERVICES.md |
+|--------|------------|---------|----------|------------|
+| claudia | — | — | — | ✅ `system/SERVICES.md` |
+| sdigits | ❌ missing | ❌ missing | ❌ missing | ❌ missing |
+| thoth | ❌ missing | ❌ missing | ❌ missing | ❌ missing |
+| nirto5-1 | ❌ missing | ❌ missing | ❌ missing | ❌ missing |
+| mintbookpro | ❌ missing | ❌ missing | ❌ missing | ❌ missing |
+
+See `FLEET-STANDARD.md` → Vessel Index Requirement for the format.
+
+---
+
 ## Adding a New Vessel
 
 1. Create `fleet-ops/<vessel>/profile.json` from `fleet-ops/profile-schema.json`
