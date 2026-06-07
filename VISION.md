@@ -6,6 +6,10 @@ The Nexus is the central title, index, and evolving core knowledge hub for the e
 
 It is not meant to replace existing paths or tool calls — it directs traffic, maintains standards, tracks usage, and serves as the single source of truth for navigation, onboarding, and knowledge.
 
+For local workstation use, this repo now includes:
+- `docs/START_HERE.md` — local onboarding / orientation
+- `docs/LOCAL_REPO_MAP.md` — concrete links to the existing local fleet repos, skills corpus repos, and runtime experiment anchors
+
 ## Core Philosophy (cli-engine inspired)
 - Split-brain model: Agent OS = planning, routing, memory, deliberation. CLI-Engine = structured execution, recipes, harnesses, artifact production.
 - All system software and hardware are in scope (not just creative tools).
@@ -21,6 +25,7 @@ It is not meant to replace existing paths or tool calls — it directs traffic, 
 - **Per-Vessel Git Repos** — Each vessel (claudia, thoth, sdigits, dj, nirto5-1, mintbookpro, etc.) gets its own repo for independent versioning while contributing to The Nexus.
 - **Fleet Standard** — Living document defining structure, naming conventions, contribution rules, Archivist interaction, and usage tracking requirements.
 - **Usage Tracking** — All skills, tools, models, experiments, and Quorum decisions must log usage (success rate, frequency, last used, context). This data feeds daily LoRAs, fine-tunes, and The Archivist’s RAG.
+- **Skills / Discovery Anchors** — The Nexus should point to the actual local skills corpus and adjacent discovery repos already in use, rather than describing them abstractly.
 
 ## Usage Tracking Requirements
 - Every tool call, skill invocation, model inference, experiment, and Quorum deliberation must record:
