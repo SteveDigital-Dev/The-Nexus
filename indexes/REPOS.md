@@ -1,7 +1,7 @@
 # Fleet Repository Index
-**Updated:** 2026-06-07 | Managed by: `~/bin/fleet-pull` + `fleet-ops/bin/fleet-pull`
+**Updated:** 2026-06-08 | Managed by: `~/bin/fleet-pull` + `fleet-ops/bin/fleet-pull`
 
-13 repositories. Sync all with `fleet-pull`.
+14 repositories. Sync all with `fleet-pull`.
 
 ---
 
@@ -17,6 +17,7 @@
 | **private-agent-library** | `/Users/digital/clawd/repos/private-agent-library` | Curated agent skills library |
 | **med-suite** | `/Users/digital/clawd/skills/med-suite` | Local medical decision support (3-tier LLM + 946-doc RAG) |
 | **xo-modelfiles** | `/Users/digital/clawd/xo-modelfiles` | Ollama Modelfiles + parameter rationale (REASONING.md) |
+| **openclaw-Claudia** | `/Users/digital/clawd/openclaw-Claudia` | Custom openclaw skill additions (thin fork, Claudia vessel only) |
 
 ## MCP / Third-Party (forked)
 
