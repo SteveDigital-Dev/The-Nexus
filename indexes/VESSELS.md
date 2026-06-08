@@ -1,5 +1,5 @@
 # Fleet Vessel Index
-**Updated:** 2026-06-07 | Source of truth: `fleet-ops/<vessel>/profile.json`
+**Updated:** 2026-06-08 | Source of truth: `fleet-ops/<vessel>/profile.json`
 
 ---
 
@@ -77,15 +77,22 @@
 ## mintbookpro
 
 **Profile:** `fleet-ops/mintbookpro/profile.json` (v1.0.0)  
-**Role:** Academy cadets host. Docker-based cadet environment. Crew plan: `fleet-ops/mintbookpro/CREW_PLAN.md`  
-**Status:** ✅ active (cadets offline — sdigits substituting)
+**Role:** Research library node. Large Git catalog (200+ repos), Nextcloud, Eurorack schematics. Crew plan: `fleet-ops/mintbookpro/CREW_PLAN.md`  
+**Status:** ✅ active — SSH via Tailscale established 2026-06-08
 
 | Field | Value |
 |-------|-------|
+| Hostname | `MintBookPro` |
+| Tailscale | `mintbookpro` · `100.103.62.96` · LAN `192.168.68.52` |
+| OS | Linux Mint 22.3 (Zena), kernel 6.8.0-124 |
 | CPU | Intel Core i5-3210M (2C/4T) @ 2.50GHz |
-| GPU | Intel HD Graphics 4000 (Ivy Bridge, integrated) |
+| RAM | 15.5 GiB |
+| Storage | 938 GB root (85% full — 136 GB free) |
+| SSH user | `sdigits` |
+| Ollama models | 79 (localhost:11434 only, CPU inference) |
 
-**Services:** docker, open_webui, xyops, clawdbot_gateway, nemoclaw_telegram, nemoclaw_sync
+**Services:** ollama (localhost:11434), nextcloud (Docker :8080), samba (139/445), tailscaled  
+**System docs:** `fleet-ops/mintbookpro/system/` → PROJECTS.md · REPOS.md · SERVICES.md · OLLAMA_MODELS.md · STORAGE.md
 
 ---
 
@@ -107,7 +114,7 @@
 | sdigits | ❌ missing | ❌ missing | ❌ missing | ❌ missing |
 | thoth | ❌ missing | ❌ missing | ❌ missing | ❌ missing |
 | nirto5-1 | ❌ missing | ❌ missing | ❌ missing | ❌ missing |
-| mintbookpro | ❌ missing | ❌ missing | ❌ missing | ❌ missing |
+| mintbookpro | ✅ `system/PROJECTS.md` | ✅ `system/REPOS.md` | ✅ `system/PAPERS.md` | ✅ `system/SERVICES.md` |
 
 See `FLEET-STANDARD.md` → Vessel Index Requirement for the format.
 
