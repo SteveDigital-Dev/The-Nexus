@@ -102,15 +102,53 @@ Format in fleet-pull: `"path:upstream"` for forked repos so pulls track the orig
 
 ## Skills Protocol
 
+### Skills Architecture ⚠️ Fleet Rule
+
+**Base skills** (bundled in upstream `openclaw` npm package) may be added to the always-loaded allowlist.  
+**Custom/coopted skills** are **never** in the always-loaded allowlist — they are discovered and loaded on demand.
+
+| Layer | Mechanism | Status |
+|-------|-----------|--------|
+| Layer 0 | `floor-manager` SKILL.md roster — compact always-loaded index | ✅ live |
+| Layer 1 | `dispatch.py` keyword routing | ✅ live |
+| Layer 2 | Vector RAG over `private-agent-library` | planned |
+
+**floor-manager** is the one permanent exception — it stays in the allowlist as the routing gateway until Layer 2 RAG is operational.
+
+### openclaw-Claudia fork
+
+Custom additions live in `~/clawd/openclaw-Claudia/` — a thin-fork repo containing only the delta over the upstream package.
+
+- **Rule:** Only skills not present in `/npm-global/lib/node_modules/openclaw/skills/` go here
+- **Symlinks:** Each custom skill is symlinked: `~/.openclaw/skills/<name>/` → `~/clawd/openclaw-Claudia/skills/<name>/`
+- **Tracked in:** `fleet-pull`, `The-Nexus/indexes/REPOS.md`
+- **Upstream link:** `~/clawd/openclaw-Claudia/UPSTREAM.md`
+
+When adding a new custom skill:
+1. Create `~/clawd/openclaw-Claudia/skills/<name>/SKILL.md`
+2. Symlink: `ln -s ~/clawd/openclaw-Claudia/skills/<name> ~/.openclaw/skills/<name>`
+3. Add to `floor-manager` SKILL.md roster (Layer 0)
+4. Add keywords to `floor-manager/dispatch.py` (Layer 1)
+5. Do **not** add to the openclaw.json allowlist
+
+### Current bundled skills allowlist (openclaw v2026.5.22)
+
+```
+apple-notes  apple-reminders  coding-agent  gemini  gh-issues  github
+healthcheck  notion  summarize  taskflow  tmux  weather
+```
+
+Plus: `floor-manager` (custom, routing gateway exception)
+
 ### venv placement
 **Never** put `venv/`, `node_modules/`, or `.git/` inside `~/clawd/skills/`.  
 OpenClaw's skills scanner opens every file recursively — large trees exhaust file descriptors.  
 All venvs → `~/clawd/.venvs/<skill-name>/`
 
-### OpenClaw skill registration
+### OpenClaw skill registration (bundled skills only)
 Two steps required — allowlist alone is not enough:
 1. Add skill name to `agents.defaults.skills` in `~/.openclaw/openclaw.json`
-2. Create `~/.openclaw/skills/<name>/SKILL.md` (frontmatter: name, description, metadata emoji)
+2. Verify the skill exists in `/npm-global/lib/node_modules/openclaw/skills/`
 
 ### SKILL.md frontmatter minimum
 ```yaml
