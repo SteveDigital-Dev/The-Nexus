@@ -30,32 +30,42 @@
 
 **Profile:** `fleet-ops/sdigits/profile.json` (v1.4.1)  
 **Role:** Primary workstation, fleet orchestrator. Active substitute for academy operations (MintBookPro offline).  
-**Status:** ✅ active
+**Status:** ✅ active — SSH established 2026-06-08
 
 | Field | Value |
 |-------|-------|
 | Hostname | `sdigits` |
 | Tailscale | `sdigits` · `100.87.124.62` |
+| OS | Arch Linux (kernel 6.19.13-arch1-1) |
 | CPU | Intel Core i5-8250U (4C/8T) @ 1.60GHz |
-| GPU | Intel UHD Graphics 620 (integrated) |
+| RAM | 7.7 GiB |
+| Storage | 475 GB root (53% full — 224 GB free) |
+| SSH user | `sdigits` |
+| Ollama models | 14 (localhost:11434 only) |
 
-**Services:** clawdbot/openclaw, nemoclaw, ollama  
-**Key scripts:** `scripts/deploy_locals.py`, `scripts/fine_tooth_comb.py`, `scripts/update_rag.py`, `scripts/sync_sessions.py`, `scripts/sync_vessels.py`
+**Services:** openclaw/clawdbot (localhost:18789), ollama (localhost:11434), docker (containers exited), ssh (:22)  
+**System docs:** `fleet-ops/sdigits/system/` → PROJECTS.md · REPOS.md · SERVICES.md · OLLAMA_MODELS.md · STORAGE.md
 
 ---
 
 ## thoth
 
 **Profile:** `fleet-ops/thoth/profile.json` (v1.3.0)  
-**Role:** Captain bridge / control plane / Hermes gateway / RAG and DB host. Best-stocked machine for papers in the fleet.  
-**Status:** ✅ active
+**Role:** Captain bridge / control plane / Hermes gateway / RAG and DB host.  
+**Status:** ✅ active — SSH established 2026-06-08
 
 | Field | Value |
 |-------|-------|
-| Hostname | `thoth` |
+| Hostname | `Thoth` |
 | Tailscale | `thoth` · `100.72.231.127` |
+| OS | Linux Mint 22.3 (Zena), kernel 6.8.0-117 |
 | CPU | AMD A4-4300M APU (2C/2T) |
-| GPU | AMD Radeon HD 7420G (display only) |
+| RAM | 7.0 GiB (tight — ~742 MB free at survey) |
+| Storage | 439 GB root (45%) + `/mnt/DATA` (unsurveyed) |
+| SSH user | `sdigits` |
+
+**Services:** hermes gateway (active), chromadb (localhost:8000), ollama (localhost:11434), portainer-agent (:9001), file-server (:8090), docker  
+**System docs:** `fleet-ops/thoth/system/` → PROJECTS.md · REPOS.md · SERVICES.md · OLLAMA_MODELS.md · STORAGE.md
 
 ---
 
@@ -111,8 +121,8 @@
 | Vessel | PROJECTS.md | REPOS.md | PAPERS.md | SERVICES.md |
 |--------|------------|---------|----------|------------|
 | claudia | ✅ `system/PROJECTS.md` | ✅ `system/REPOS.md` | ✅ `system/PAPERS.md` | ✅ `system/SERVICES.md` |
-| sdigits | ❌ missing | ❌ missing | ❌ missing | ❌ missing |
-| thoth | ❌ missing | ❌ missing | ❌ missing | ❌ missing |
+| sdigits | ✅ `system/PROJECTS.md` | ✅ `system/REPOS.md` | ✅ `system/PAPERS.md` | ✅ `system/SERVICES.md` |
+| thoth | ✅ `system/PROJECTS.md` | ✅ `system/REPOS.md` | ✅ `system/PAPERS.md` | ✅ `system/SERVICES.md` |
 | nirto5-1 | ❌ missing | ❌ missing | ❌ missing | ❌ missing |
 | mintbookpro | ✅ `system/PROJECTS.md` | ✅ `system/REPOS.md` | ✅ `system/PAPERS.md` | ✅ `system/SERVICES.md` |
 
