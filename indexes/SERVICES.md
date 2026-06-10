@@ -1,5 +1,5 @@
 # Fleet Services Index
-**Updated:** 2026-06-07 | Authoritative detail: `fleet-ops/claudia/system/SERVICES.md`
+**Updated:** 2026-06-10 | Authoritative detail: `fleet-ops/<vessel>/system/SERVICES.md`
 
 ---
 
@@ -51,26 +51,50 @@ Models at `/Volumes/DATA/ollama` (342GB external — NOT `~/.ollama/models`)
 
 ## sdigits
 
-| Service | Notes |
-|---------|-------|
-| openclaw / clawdbot | Gateway |
-| nemoclaw | Telegram sync |
-| ollama | Local inference (port 11434) |
+| Port | Service | Notes |
+|------|---------|-------|
+| 11434 | Ollama | 33 local + 6 cloud models |
+| — | Hermes gateway | Primary fleet orchestrator |
+| — | Clawdbot | Telegram bot (NemoClaw) |
+| — | MCP host | 25 MCP servers, 28 tools |
+
+```bash
+systemctl --user status hermes    # Hermes gateway status
+ollama list                       # Model inventory
+```
 
 ---
 
 ## thoth
 
-Captain bridge / Hermes gateway / RAG host. See `fleet-ops/thoth/profile.json` for details.
+| Port | Service | Notes |
+|------|---------|-------|
+| 11434 | Ollama | Local inference (CPU) |
+| 8000 | ChromaDB | Vector RAG store (Docker) |
+| 8002 | Dashboard | FastAPI + React SPA |
+| 8090 | file-server | Static file serving |
+| 9001 | Portainer agent | Docker management |
+
+```bash
+ssh thoth "systemctl --user status hermes"    # Hermes gateway
+docker ps                                      # Running containers
+```
 
 ---
 
 ## nirto5-1
 
-GPU inference node. RTX 2060, CUDA. Remote Ollama endpoint for heavy models.  
-Tailscale: `100.124.34.87:11434`
+| Port | Service | Notes |
+|------|---------|-------|
+| 11434 | Ollama | GPU-accelerated (RTX 2060 CUDA) |
 
-OpenClaw config for remote: `ollama-remote` provider at `192.168.68.51:11434`
+```bash
+ssh nirto5-1 "ollama list"                               # Model inventory
+curl http://100.124.34.87:11434/api/tags                 # Remote model list
+```
+
+Hermes profile: `hermes -p nirto5-1` (SSH backend)  
+OpenClaw remote config: `ollama-remote` provider at `100.124.34.87:11434`
 
 ---
 

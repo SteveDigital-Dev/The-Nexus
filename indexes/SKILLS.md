@@ -1,5 +1,5 @@
 # Fleet Skills Index
-**Updated:** 2026-06-07
+**Updated:** 2026-06-10
 
 XO skills live in two places:
 - **`~/clawd/skills/`** — Active skills running on Claudia
@@ -42,13 +42,42 @@ Triggers: drug interaction, NICE, ESC, clinical, prescribing, diagnosis, treatme
 
 ---
 
+## InfraOps Model Fleet (claudia:11434)
+
+Custom Ollama models based on qwen2.5-coder:7b for fleet infrastructure operations.
+
+| Model | Role | Skill definition |
+|-------|------|-----------------|
+| infraops-orchestrator | Meta-router + Cerberus deliberation | `skills/infraops-orchestrator-model/SKILL.md` |
+| infraops-fleet | Multi-node SSH/Tailscale ops | `skills/infraops-fleet-model/SKILL.md` |
+| infraops-deploy | Deployments, git, rollouts | `skills/infraops-deploy-model/SKILL.md` |
+| infraops-health | Monitoring, alerts, diagnostics | `skills/infraops-health-model/SKILL.md` |
+| infraops-security | Scanning, auditing, hardening | `skills/infraops-security-model/SKILL.md` |
+| infraops-librarian | Knowledge, RAG, Obsidian, registry | `skills/infraops-librarian-model/SKILL.md` |
+| infraops-pro | General infra + tool use | — |
+| micro-infraops | Fast lightweight queries | — |
+
+All Modelfiles: `private-agent-library/models/infraops-*/Modelfile`
+
+```bash
+# Build on claudia
+ollama create infraops-orchestrator -f models/infraops-orchestrator/Modelfile
+# Test
+ollama run infraops-orchestrator "Describe fleet topology"
+```
+
+---
+
 ## Private Agent Library
 
-Large curated catalog at `~/clawd/repos/private-agent-library/`.  
-Contains specialist agents across: engineering, finance, security, data, UX, VR/AR, physics, and more.  
+Large curated catalog at `private-agent-library/skills/` (sdigits: `/mnt/DATA/Git/private-agent-library/skills/`).  
+1543 registered skills. Contains specialist agents across: engineering, finance, security, data, UX, VR/AR, physics, and more.  
 Sub-categories: `aa-eng-*`, `aa-spec-*`, `ua-*`, `ec-*`, `gsd-*`, `ouroboros-*`
 
-Browse: `ls ~/clawd/repos/private-agent-library/ | grep <category>`
+```bash
+ls /mnt/DATA/Git/private-agent-library/skills/ | grep <category>
+hermes skills list    # Skills visible to Hermes
+```
 
 ---
 

@@ -2,7 +2,8 @@
 
 **Last Updated:** 2026-06-10  
 **Maintained by:** The Archivist / Aria  
-**Source of truth for:** node topology, services, models, and cross-repo links
+**Purpose:** Topology overview — IPs, roles, models, Hermes profiles, cross-repo links  
+**Per-vessel detail:** `indexes/VESSELS.md` · `indexes/SERVICES.md`
 
 ---
 
@@ -11,73 +12,67 @@
 | Vessel | OS | CPU | RAM | Tailscale IP | Status |
 |--------|-----|-----|-----|--------------|--------|
 | sdigits | Arch Linux (Omarchy 3.3.3) | Intel i5-8250U (4C/8T) | 7.7 GB | 100.87.124.62 | ONLINE |
-| claudia | macOS | Apple M4 | 32 GB unified | 100.93.100.37 | ONLINE |
-| thoth | Linux Mint 22.3 | AMD A4-4300M (2C/2T) | 7 GB | 100.72.231.127 | ONLINE |
+| claudia | macOS 15.x | Apple M4 (10-core) | 32 GB unified | 100.93.100.37 | ONLINE |
+| thoth | Linux Mint 22.3 | AMD A4-4300M (2C/2T) | 7.0 GB | 100.72.231.127 | ONLINE |
 | nirto5-1 | Windows 11 | Intel i5-9300H (4C/8T) | 24 GB | 100.124.34.87 | ONLINE |
 | mintbookpro | Linux Mint 22.3 | Intel i5-3210M (2C/4T) | 15.5 GB | 100.103.62.96 | ONLINE |
 | dj | AgentOS-Creative-Layer | virtual | 4 GB | 100.112.235.121 | TAILNET-AUTH-BLOCKED |
 
 ---
 
-## Node Details
+## Node Roles & Key Services
 
 ### sdigits — Primary Workstation / Fleet Orchestrator
-- **Device:** Lenovo IdeaPad 330S-15IKB
-- **GPU:** Intel UHD 620 (integrated, no acceleration)
+- **Device:** Lenovo IdeaPad 330S-15IKB · Intel UHD 620 (no GPU accel)
 - **Role:** Main dev machine, Hermes gateway host, Clawdbot + NemoClaw Telegram bots
-- **Services:** Ollama :11434 (33 local + 6 cloud models), Hermes gateway, MCP host (25 servers), RAG host
-- **SSH:** `ssh sdigits` / `100.87.124.62`
+- **Services:** Ollama :11434 (33 local + 6 cloud), Hermes gateway, MCP host (25 servers), RAG host
+- **SSH:** `ssh sdigits` (user: `sdigits`)
 - **Hermes profile:** local (default)
 - **Fleet profile:** `private-agent-library/fleet/sdigits/profile.json`
-- **Notable resources:** 620 git repos indexed, 85 papers (100% RAG coverage), 1543 skills
 
 ### claudia — M4 Mac Mini / Primary Inference Node
-- **Device:** Apple Mac mini (2024)
-- **GPU:** Apple M4 integrated / Metal
-- **Role:** Heavy inference, remote Ollama, InfraOps model host
-- **Services:** Ollama :11434 (InfraOps specialist fleet)
-- **SSH:** `ssh claudia` / `100.93.100.37`
+- **Device:** Apple Mac mini (2024) · M4 GPU / Metal
+- **Role:** Heavy inference, InfraOps model host, Med Suite host, OpenClaw gateway
+- **Services:** Ollama :11434 (73 models at `/Volumes/DATA/ollama`), Med Suite :7755, ChromaDB :8000, Kokoro TTS :40001, OpenClaw :18789, LM Studio :1234
+- **SSH:** `ssh claudia` (user: `digital`)
 - **Hermes profile:** *(not yet wired)*
 - **Fleet profile:** `private-agent-library/fleet/claudia/system/machine-db.json`
-- **InfraOps models hosted:** infraops-fleet, infraops-deploy, infraops-health, infraops-security, infraops-librarian, infraops-orchestrator, infraops-pro, micro-infraops
+- **Detail:** `indexes/VESSELS.md#claudia` · `indexes/SERVICES.md#claudia`
 
-### thoth — Fleet Control Plane Node
-- **Device:** HP mt41 Mobile Thin Client
-- **GPU:** AMD Radeon HD 7420G (integrated)
-- **Role:** Lightweight control plane, dashboard server, low-power always-on
-- **Services:** Dashboard server :8002 (React SPA + FastAPI)
-- **SSH:** `ssh thoth` / `100.72.231.127`
+### thoth — Control Plane / Hermes Gateway
+- **Device:** HP mt41 Mobile Thin Client · AMD Radeon HD 7420G
+- **Role:** Hermes gateway, RAG/DB host, lightweight always-on control plane
+- **Services:** Hermes gateway, ChromaDB :8000, Ollama :11434, Portainer-agent :9001, file-server :8090, Docker
+- **SSH:** `ssh thoth` (user: `sdigits`)
 - **Hermes profile:** *(not yet wired)*
 - **Fleet profile:** `private-agent-library/fleet/thoth/system/machine-db.json`
-- **Repo:** `fleet-ops/thoth/`
 
-### nirto5-1 — Windows Gaming Node / GPU Compute
-- **Device:** Acer Nitro 5 (AN515-54 class)
-- **GPU:** NVIDIA RTX 2060 Mobile 6 GB (GPU-accelerated Ollama)
-- **Role:** GPU inference, Windows-native workloads, Ollama GPU node
+### nirto5-1 — Windows GPU Node
+- **Device:** Acer Nitro 5 (AN515-54) · NVIDIA RTX 2060 Mobile 6 GB (CUDA)
+- **Role:** GPU inference, Windows-native workloads, remote Ollama CUDA endpoint
 - **Services:** Ollama :11434 (GPU-accelerated)
-- **SSH:** `ssh nirto5-1` / `steve@100.124.34.87`
-- **Hermes profile:** `hermes -p nirto5-1` (SSH backend, CWD: C:/Users/steve)
+- **SSH:** `ssh nirto5-1` (user: `steve`) · `100.124.34.87`
+- **Hermes profile:** `hermes -p nirto5-1` (SSH backend, CWD: `C:/Users/steve`)
 - **Fleet profile:** `private-agent-library/fleet/nirto5-1/system/machine-db.json`
 
-### mintbookpro — Secondary Linux Laptop
-- **Device:** Apple MacBook Pro 13-inch Mid 2012 (candidate — awaiting DMI confirm)
-- **GPU:** Intel HD Graphics 4000
-- **Role:** Secondary dev/test node
-- **SSH:** `ssh mintbookpro` / `100.103.62.96`
+### mintbookpro — Research Library Node
+- **Device:** MacBook Pro 13" Mid 2012 (candidate) · Intel HD 4000
+- **Role:** Research library, large Git catalog (200+ repos), Nextcloud, Eurorack schematics
+- **Services:** Ollama :11434 (79 models, CPU), Nextcloud :8080 (Docker), Samba :139/445
+- **SSH:** `ssh mintbookpro` (user: `sdigits`) · LAN: `192.168.68.52`
 - **Hermes profile:** *(not yet wired)*
 - **Fleet profile:** `private-agent-library/fleet/mintbookpro/system/machine-db.json`
 
 ### dj — Audio/Mood Synthesis Engine
 - **Role:** Podcast automation, audio mastering, mood synthesis
-- **Status:** Tailnet auth blocked — services not accessible
+- **Status:** Tailnet auth blocked — not accessible
 - **Fleet profile:** `private-agent-library/fleet/dj/profile.json`
 
 ---
 
-## InfraOps Model Fleet (hosted on claudia:11434)
+## InfraOps Model Fleet (claudia:11434)
 
-| Model | Domain | Ollama Name |
+| Model | Domain | Ollama name |
 |-------|---------|-------------|
 | infraops-orchestrator | Meta-router + Cerberus deliberation | `infraops-orchestrator` |
 | infraops-fleet | Multi-node SSH/Tailscale ops | `infraops-fleet` |
@@ -93,45 +88,50 @@ Skills: `private-agent-library/skills/infraops-*-model/SKILL.md`
 
 ---
 
+## Hermes Profiles (on sdigits)
+
+| Profile | Backend | Target | Notes |
+|---------|---------|--------|-------|
+| (default) | local | sdigits | `~/.hermes/config.yaml` |
+| nirto5-1 | ssh | 100.124.34.87 (steve) | `~/.hermes/profiles/nirto5-1/` |
+
+**Fallback model chain:** `infraops-orchestrator` (claudia:11434) → `qwen2.5-coder:7b` (localhost:11434)
+
+---
+
 ## Key Repos
 
-| Repo | Path | Purpose |
-|------|------|---------|
+| Repo | Path (sdigits) | Purpose |
+|------|----------------|---------|
 | The-Nexus | `/mnt/DATA/Git/The-Nexus` | Central index, standards, this file |
 | private-agent-library | `/mnt/DATA/Git/private-agent-library` | Skills, models, dashboards, fleet profiles, registry |
 | fleet-ops | `/mnt/DATA/Git/SteveDigital Projects/fleet-ops` | Per-vessel submodules, fleet.py orchestrator |
 | aria-obsidian | `/mnt/DATA/Git/aria-obsidian` | Primary Obsidian knowledge vault |
 
+Full repo catalog: [PROJECT-INDEX.md](PROJECT-INDEX.md)
+
 ---
 
 ## Dashboards
 
-| Dashboard | URL / Path | Data Feed |
-|-----------|-----------|-----------|
+| Dashboard | Path / URL | Feed |
+|-----------|-----------|------|
 | Fleet Command | `private-agent-library/dashboards/fleet-command/` | static JS payload |
-| Fleet Code IDE | `private-agent-library/dashboards/fleet-code-ide/index.html` | fetch-poll `data/fleet-code-ide/status.json` (30s) |
+| Fleet Code IDE | `private-agent-library/dashboards/fleet-code-ide/index.html` | fetch-poll `status.json` (30s) |
 | Knowledge Graph 3D | `private-agent-library/dashboards/knowledge-graph-3d/` | static |
 | Thoth Dashboard | `http://thoth:8002` | FastAPI + React SPA |
 
 ---
 
-## Hermes Profiles
+## Vessel Index Coverage
 
-| Profile | Backend | Target | Config |
-|---------|---------|--------|--------|
-| (default) | local | sdigits | `~/.hermes/config.yaml` |
-| nirto5-1 | ssh | 100.124.34.87 (steve) | `~/.hermes/profiles/nirto5-1/` |
+| Vessel | PROJECTS | REPOS | PAPERS | SERVICES | Hermes profile |
+|--------|----------|-------|--------|----------|----------------|
+| claudia | ✅ | ✅ | ✅ | ✅ | ❌ not wired |
+| sdigits | ✅ | ✅ | ✅ | ✅ | ✅ default |
+| thoth | ✅ | ✅ | ✅ | ✅ | ❌ not wired |
+| nirto5-1 | ❌ | ❌ | ❌ | ❌ | ✅ wired |
+| mintbookpro | ✅ | ✅ | ✅ | ✅ | ❌ not wired |
+| dj | — | — | — | — | — |
 
-Fallback model chain: `infraops-orchestrator` (claudia:11434) → `qwen2.5-coder:7b` (localhost:11434)
-
----
-
-## Cross-Repo Links
-
-- Fleet node profiles: `private-agent-library/fleet/<vessel>/`
-- Fleet standard: `The-Nexus/FLEET-STANDARD.md`
-- InfraOps Modelfiles: `private-agent-library/models/`
-- Skills registry: `private-agent-library/skills/`
-- Agent registry: `private-agent-library/registry/agent_registry.json`
-- Quorum plans: `private-agent-library/docs/plans/`
-- ADRs: `private-agent-library/docs/adr/`
+Detail docs live in `fleet-ops/<vessel>/system/` per FLEET-STANDARD.md.

@@ -1,5 +1,6 @@
 # Fleet Vessel Index
-**Updated:** 2026-06-08 | Source of truth: `fleet-ops/<vessel>/profile.json`
+**Updated:** 2026-06-10 | Source of truth: `fleet-ops/<vessel>/profile.json`  
+**Topology overview:** [FLEET-INDEX.md](../FLEET-INDEX.md)
 
 ---
 
@@ -73,14 +74,22 @@
 
 **Profile:** `fleet-ops/nirto5-1/profile.json` (v1.1.0)  
 **Role:** GPU workstation / large local model endpoint. RTX 2060 for CUDA inference.  
-**Status:** ✅ active
+**Status:** ✅ active — SSH established 2026-06-10
 
 | Field | Value |
 |-------|-------|
-| Hostname | `nirto5-1` |
+| Hostname | `Nirto5-1` |
 | Tailscale | `nirto5-1` · `100.124.34.87` |
+| OS | Windows 11 |
 | CPU | Intel Core i5-9300H (4C/8T) |
-| GPU | NVIDIA GeForce RTX 2060 (6GB GDDR6, CUDA) |
+| GPU | NVIDIA GeForce RTX 2060 Mobile (6GB GDDR6, CUDA) |
+| RAM | 24 GB |
+| SSH user | `steve` |
+| Shell | PowerShell / CMD |
+| Hermes profile | `hermes -p nirto5-1` (SSH backend, CWD: `C:/Users/steve`) |
+
+**Services:** Ollama :11434 (GPU-accelerated, CUDA)  
+**System docs:** `fleet-ops/nirto5-1/system/` → ❌ not yet created (PROJECTS, REPOS, SERVICES missing)
 
 ---
 

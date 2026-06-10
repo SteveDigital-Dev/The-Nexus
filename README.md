@@ -6,12 +6,20 @@ Central title, index, and knowledge hub for the fleet and Agent OS.
 
 | Document | Purpose |
 |----------|---------|
-| [PROJECT-INDEX.md](PROJECT-INDEX.md) | Full categorized project/repo list across the fleet (~140 repos) |
-| [FLEET-INDEX.md](FLEET-INDEX.md) | Node roster, IPs, services, models, Hermes profiles, cross-repo links |
-| [FLEET-STANDARD.md](FLEET-STANDARD.md) | Repo structure, Kanban rules, usage tracking, onboarding |
-| [SKILL-INDEX.md](SKILL-INDEX.md) | Registered skills, crew positions, usage registry |
-| [TOOLBOX-SYSTEM.md](TOOLBOX-SYSTEM.md) | Tool catalog and system capabilities |
+| [FLEET-INDEX.md](FLEET-INDEX.md) | Node roster, IPs, roles, models, Hermes profiles — topology overview |
+| [PROJECT-INDEX.md](PROJECT-INDEX.md) | Full categorized project/repo list (~140 repos) |
+| [FLEET-STANDARD.md](FLEET-STANDARD.md) | Naming conventions, vessel index rules, Kanban, onboarding |
 | [VISION.md](VISION.md) | Direction, Agent OS philosophy, Archivist role |
+| [START-HERE.md](START-HERE.md) | Onboarding entry point for new vessels/agents |
+
+### Per-Vessel & Service Detail (`indexes/`)
+
+| File | Purpose |
+|------|---------|
+| [indexes/VESSELS.md](indexes/VESSELS.md) | Per-vessel hardware, services, SSH, coverage status |
+| [indexes/SERVICES.md](indexes/SERVICES.md) | Port maps, LaunchAgents, restart commands per node |
+| [indexes/SKILLS.md](indexes/SKILLS.md) | Active skills, InfraOps model fleet, private-agent-library |
+| [indexes/REPOS.md](indexes/REPOS.md) | Core fleet repos with per-vessel paths, fleet-pull reference |
 
 ## Quick Reference
 
