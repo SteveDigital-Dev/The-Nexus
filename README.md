@@ -6,6 +6,7 @@ Central title, index, and knowledge hub for the fleet and Agent OS.
 
 | Document | Purpose |
 |----------|---------|
+| [PROJECT-INDEX.md](PROJECT-INDEX.md) | Full categorized project/repo list across the fleet (~140 repos) |
 | [FLEET-INDEX.md](FLEET-INDEX.md) | Node roster, IPs, services, models, Hermes profiles, cross-repo links |
 | [FLEET-STANDARD.md](FLEET-STANDARD.md) | Repo structure, Kanban rules, usage tracking, onboarding |
 | [SKILL-INDEX.md](SKILL-INDEX.md) | Registered skills, crew positions, usage registry |
