@@ -1,0 +1,99 @@
+{
+  "id": "sdigits-lenovo",
+  "hostname": "sdigits",
+  "tailscale_hostname": "sdigits",
+  "version": "1.4.1",
+  "os": {
+    "family": "linux",
+    "distribution": "Arch Linux (Omarchy 3.3.3)",
+    "kernel": "6.19.13-arch1-1",
+    "shell": "/usr/bin/bash",
+    "desktop": "Hyprland"
+  },
+  "hardware": {
+    "cpu": "Intel Core i5-8250U (4C/8T) @ 1.60GHz",
+    "ram_gb": 7.7,
+    "ram_available_gb": 4.2,
+    "gpu": "Intel UHD Graphics 620 (integrated)",
+    "acceleration": "none",
+    "disk_total": "475G",
+    "disk_free": "226G",
+    "disk_used_pct": 53,
+    "disk_data": "/mnt/Z — 440G total, 64G free, 85% used",
+    "device": "Lenovo IdeaPad 330S-15IKB"
+  },
+  "network": {
+    "hostname": "sdigits",
+    "tailscale_ip": "100.87.124.62",
+    "tailscale_ipv6": "fd7a:115c:a1e0::f132:7c3e",
+    "tailscale_account": "stevedigital719@",
+    "ollama_port": 11434,
+    "timezone": "EDT"
+  },
+  "services": {
+    "clawdbot": { "running": true, "role": "Telegram bot / fleet gateway" },
+    "nemoclaw": { "running": true, "role": "Telegram sync worker" },
+    "ollama": { "running": true, "port": 11434, "models": 59 }
+  },
+  "custom_models": {
+    "repo": "https://github.com/SteveDigital-Dev/xo-modelfiles",
+    "visibility": "private",
+    "stack": "XO medical decision-support — three-tier",
+    "hardware_note": "CPU-only / 7.7 GB RAM — med-triage and med-fast runnable; med-reasoning requires Claudia or Nirto5-1",
+    "models": [
+      { "name": "med-triage",    "base": "cadet-health:latest",    "role": "Fast clinical screening", "runnable_here": true },
+      { "name": "med-fast",      "base": "XO_MedGemma_4B:latest",  "role": "Action lists, drug queries", "runnable_here": true },
+      { "name": "med-reasoning", "base": "XO_MedGemma_27B:latest", "role": "Differentials, complex cases", "runnable_here": false, "run_on": "claudia or nirto5-1" }
+    ],
+    "baked_protocols": ["NICE NG109","NICE NG111","NICE NG120","NICE NG136","NICE NG191","NICE NG28","NICE NG15","ESC 2023 ACS","ESC 2021 HF","JNC 8"],
+    "used_by": "med-suite — FastAPI dashboard, 946-doc RAG, drug interaction checker"
+  },
+  "resources": {
+    "repos": 853,
+    "papers": 1094,
+    "papers_rag_coverage_pct": 100,
+    "git_repos_indexed": 171,
+    "skills": 1257,
+    "claude_code_skills": 213,
+    "mcp_servers": 1,
+    "mcp_tools": 10,
+    "mcp_notes": "unified-rag MCP server (rag.search, rag.skills, rag.mcp, rag.system, rag.status, rag.models + 4 more)"
+  },
+  "models": {
+    "total": 59,
+    "cloud": 18,
+    "local": 41,
+    "notes": "CPU-only inference; gemma4 (9.6 GB) and midshipman-fleet (7.2 GB) near RAM ceiling — swap-heavy"
+  },
+  "capabilities": {
+    "cloud_models": true,
+    "local_llm": true,
+    "gpu_acceleration": false,
+    "mcp_host": true,
+    "rag_host": true,
+    "git_mirror": true,
+    "cron_automation": true
+  },
+  "identity": {
+    "name": "sdigits",
+    "role": "Primary workstation, fleet orchestrator, active substitute for academy operations.",
+    "active_substitute_for": "academy cadets (MintBookPro offline)"
+  },
+  "role": "Primary workstation and fleet orchestrator. Main development machine. Runs Clawdbot and NemoClaw Telegram bots.",
+  "added": "2026-03-31",
+  "status": "active",
+  "last_updated": "2026-06-06T00:00:00Z",
+  "notes": "CPU-only, 7.7 GB RAM. 59 Ollama models (41 local, 18 cloud-routed). Primary Claude Code session host.",
+  "contributions": [
+    { "path": "scripts/deploy_locals.py", "type": "script", "description": "Local model deployment for high-trust tasks" },
+    { "path": "scripts/fine_tooth_comb.py", "type": "script", "description": "Comprehensive deep-dive analysis" },
+    { "path": "agent-meta-os-governance/fine-tooth-comb/SKILL.md", "type": "skill", "description": "Fine tooth comb skill definition" },
+    { "path": "agent-meta-os-governance/trusted-local-execution/SKILL.md", "type": "skill", "description": "Trusted local execution skill" },
+    { "path": "docs/TRUSTED_LOCAL_TASKS.md", "type": "docs", "description": "Trust framework documentation" },
+    { "path": "docs/CRON_WORTHY_WORKFLOWS.md", "type": "docs", "description": "Cron workflow recommendations" },
+    { "path": "scripts/update_rag.py", "type": "script", "description": "Incremental skills index sync" },
+    { "path": "scripts/sync_sessions.py", "type": "script", "description": "Claude Code session sync" },
+    { "path": "scripts/sync_vessels.py", "type": "script", "description": "Vessel registry sync into skills_index.db" }
+  ],
+  "ssh_public_key": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKJHnHSNvzVMn7zMwZQSsCk8aLbnZsS76CoWX3CwsV1G fleet-sdigits"
+}

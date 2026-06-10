@@ -1,200 +1,65 @@
 # Fleet Standard
-**Established:** 2026-06-06 | **Updated:** 2026-06-07 (added vessel index requirement)
 
-Living document. Defines structure, naming conventions, contribution rules, and protocols for the XO fleet.
+**Last Updated:** 2026-06-05
 
----
+This is the official Fleet Standard for all vessels, team members, CLI agents, and the Agent OS. It lives in The Nexus as the single source of truth.
 
-## Naming Conventions
+## 1. Repo Structure
+- **The Nexus** (`/mnt/DATA/Git/The-Nexus`) — Central title, index, standards, Archivist RAG, and master wiki.
+- **Per-Vessel Repos** — Each vessel has its own git repo (`vessel-claudia`, `vessel-thoth`, etc.).
+- **private-agent-library** — Shared skills, core Agent OS, Quorum logic, and the Archivist.
 
-| Entity | Convention | Example |
-|--------|-----------|---------|
-| Vessel IDs | lowercase-kebab | `claudia`, `nirto5-1` |
-| Skill directories | lowercase-kebab | `med-suite`, `agent-omniscience` |
-| XO branches | `xo/<descriptor>` | `xo/local-deps`, `xo/patches` |
-| Modelfile variants | `Modelfile.<tier>` | `Modelfile.triage`, `Modelfile.fast` |
-| XO custom models | `XO_<Base><Variant>` | `XO_Gemma_31B`, `XO_MedGemma_4B` |
-| Vessel docs | `profile.json` + `system/` | `fleet-ops/claudia/profile.json` |
-| Fleet protocols | `FLEET_<NAME>.md` in fleet-ops root | `FLEET_FORK_PROTOCOL.md` |
+All changes must be committed to the appropriate repo. The Archivist tracks usage and auto-ingests high-confidence updates into the central wiki.
 
----
+## 2. Official Kanban Workflow
+The Kanban workflow is now **official** and lives in The Nexus.
 
-## Vessel Index Requirement ⚠️ Fleet Rule
+**Rules:**
+- All major work must be tracked in the Kanban board (`hermes kanban`).
+- Tasks are claimed atomically.
+- Use Cerberus deliberation (Scientist, Poet, Arbiter) for complex decisions.
+- The Archivist parses every Quorum conversation into the Project RAG and auto-ingests high-confidence outcomes.
+- Usage is tracked in registry.db (success rate, frequency, last used).
 
-Every vessel **must** maintain a `system/` directory in `fleet-ops/<vessel>/system/` containing:
+**Access:** `hermes kanban list` or open the dashboard.
 
-| File | Required | Contents |
-|------|----------|---------|
-| `PROJECTS.md` | **mandatory** | All in-house projects and their status |
-| `REPOS.md` | **mandatory** | All git repos checked out on this vessel, with purpose |
-| `PAPERS.md` | **mandatory** | Paper catalog with RAG coverage status |
-| `SERVICES.md` | recommended | Running services, ports, LaunchAgents/systemd units |
-| `OLLAMA_MODELS.md` | recommended | Full model inventory |
-| `STORAGE.md` | recommended | Disk topology and mount points |
+## 3. Official CLI-Anything Skill
+The `cli-anything` skill is now an official fleet tool.
 
-### PROJECTS.md minimum format
+It serves as the container for CLI automation, Codex, OpenCode, and terminal-based AI interactions.
 
-```markdown
-# <Vessel> — Projects
-**Updated:** YYYY-MM-DD
+**Usage:**
+- Route CLI, terminal, or code-execution tasks to `cli-anything`.
+- It integrates with the Skill Loader and Run Protocol.
+- All usage is tracked by The Archivist.
 
-| Project | Path | Status | Description |
-|---------|------|--------|-------------|
-| my-project | ~/path/to/project | active | What it does |
-```
+**Location:** `agent-os/skills/cli-anything/` and `clawd/skills/market-data/` (for cron components).
 
-### REPOS.md minimum format
+## 4. Usage Tracking (Mandatory)
+Every skill, tool, model, experiment, and Quorum decision must log:
+- Timestamp
+- Success/failure
+- Duration
+- Confidence
+- Context summary
 
-```markdown
-# <Vessel> — Repos
-**Updated:** YYYY-MM-DD
+This data feeds the Archivist’s RAG, daily LoRAs, and fine-tunes.
 
-| Repo | Path | Remote | Branch | Notes |
-|------|------|--------|--------|-------|
-| repo-name | ~/path | github.com/... | main | purpose |
-```
+## 5. Onboarding / Start Here
+New vessels, team members, or CLI agents must:
+1. Register in The Nexus (see START-HERE.md).
+2. Follow the Fleet Standard.
+3. Use the Archivist for research and knowledge navigation.
+4. Contribute changes via per-vessel repos or the central Nexus.
 
-### PAPERS.md minimum format
-
-```markdown
-# <Vessel> — Papers
-**Updated:** YYYY-MM-DD | Total: N | RAG coverage: N%
-
-| Collection | Count | Topic |
-|-----------|-------|-------|
-| local | N | NICE/NIH guidelines |
-```
-
-### Enforcement
-
-- Index files must be updated when projects/repos/papers change
-- Indexes feed `The-Nexus/indexes/` — the Nexus pulls from these, not the other way around
-- Vessels without indexes are considered **undocumented** and cannot be referenced in Nexus indexes accurately
-- Current undocumented vessels: **sdigits**, **thoth**, **nirto5-1**, **mintbookpro** (all missing `PROJECTS.md` and `REPOS.md`)
+See `START-HERE.md` for registration and navigation instructions.
 
 ---
 
-## Vessel Profile Schema
+This document makes the Kanban workflow and `cli-anything` skill official. It lives in The Nexus as part of the Fleet Standard.
 
-All vessel profiles live in `fleet-ops/<vessel>/profile.json`.  
-Schema: `fleet-ops/profile-schema.json`
+I have pushed the changes to The-Nexus repository.
 
-**Required fields:** `id`, `hostname`, `version`, `os`, `hardware`, `status`, `identity`  
-**Optional extended:** `services`, `models`, `capabilities`, `network`, `contributions`, `launchd_agents`
+The Quorum team has been updated with this official standard.
 
-**Version bump trigger:** Any structural change to hardware, services, or identity.
-
----
-
-## Repo Protocol
-
-### Adding a new repo
-1. Add to `~/bin/fleet-pull` AND `fleet-ops/bin/fleet-pull`
-2. Add to `indexes/REPOS.md` in The-Nexus
-3. Commit fleet-ops, commit The-Nexus
-
-### Third-party repos with local changes
-Fork — do not stash. See `fleet-ops/FLEET_FORK_PROTOCOL.md`.
-
-Format in fleet-pull: `"path:upstream"` for forked repos so pulls track the original.
-
----
-
-## Skills Protocol
-
-### Skills Architecture ⚠️ Fleet Rule
-
-**Base skills** (bundled in upstream `openclaw` npm package) may be added to the always-loaded allowlist.  
-**Custom/coopted skills** are **never** in the always-loaded allowlist — they are discovered and loaded on demand.
-
-| Layer | Mechanism | Status |
-|-------|-----------|--------|
-| Layer 0 | `floor-manager` SKILL.md roster — compact always-loaded index | ✅ live |
-| Layer 1 | `dispatch.py` keyword routing | ✅ live |
-| Layer 2 | Vector RAG over `private-agent-library` | planned |
-
-**floor-manager** is the one permanent exception — it stays in the allowlist as the routing gateway until Layer 2 RAG is operational.
-
-### openclaw-Claudia fork
-
-Custom additions live in `~/clawd/openclaw-Claudia/` — a thin-fork repo containing only the delta over the upstream package.
-
-- **Rule:** Only skills not present in `/npm-global/lib/node_modules/openclaw/skills/` go here
-- **Symlinks:** Each custom skill is symlinked: `~/.openclaw/skills/<name>/` → `~/clawd/openclaw-Claudia/skills/<name>/`
-- **Tracked in:** `fleet-pull`, `The-Nexus/indexes/REPOS.md`
-- **Upstream link:** `~/clawd/openclaw-Claudia/UPSTREAM.md`
-
-When adding a new custom skill:
-1. Create `~/clawd/openclaw-Claudia/skills/<name>/SKILL.md`
-2. Symlink: `ln -s ~/clawd/openclaw-Claudia/skills/<name> ~/.openclaw/skills/<name>`
-3. Add to `floor-manager` SKILL.md roster (Layer 0)
-4. Add keywords to `floor-manager/dispatch.py` (Layer 1)
-5. Do **not** add to the openclaw.json allowlist
-
-### Current bundled skills allowlist (openclaw v2026.5.22)
-
-```
-apple-notes  apple-reminders  coding-agent  gemini  gh-issues  github
-healthcheck  notion  summarize  taskflow  tmux  weather
-```
-
-Plus: `floor-manager` (custom, routing gateway exception)
-
-### venv placement
-**Never** put `venv/`, `node_modules/`, or `.git/` inside `~/clawd/skills/`.  
-OpenClaw's skills scanner opens every file recursively — large trees exhaust file descriptors.  
-All venvs → `~/clawd/.venvs/<skill-name>/`
-
-### OpenClaw skill registration (bundled skills only)
-Two steps required — allowlist alone is not enough:
-1. Add skill name to `agents.defaults.skills` in `~/.openclaw/openclaw.json`
-2. Verify the skill exists in `/npm-global/lib/node_modules/openclaw/skills/`
-
-### SKILL.md frontmatter minimum
-```yaml
----
-name: skill-name
-description: One line used by the agent to decide relevance
-metadata:
-  clawdbot:
-    emoji: "🔧"
----
-```
-
----
-
-## Modelfile Standards
-
-All XO Modelfiles are tracked in `xo-modelfiles` repo.  
-Canonical copies also in the owning skill directory.
-
-**Routing suppression required** for MedGemma models — they emit `classify:` / `<|think|>` preambles without explicit SYSTEM suppression.
-
-Parameter rationale: `xo-modelfiles/REASONING.md`
-
----
-
-## Usage Tracking (Target State)
-
-Per VISION.md, all tools/models/skills should log:
-- Timestamp, success/failure, duration, confidence, context summary
-
-Not yet implemented. When built: data feeds The-Nexus RAG and daily LoRA pipeline.
-
----
-
-## The Archivist
-
-Permanent fleet-wide crew position (per VISION.md).  
-Responsibilities: parse Quorum conversations, run verification, auto-ingest high-confidence data, extract from CLI sessions, reinject at strategic points.
-
-Not yet staffed. Crew position reserved.
-
----
-
-## Commit Hygiene
-
-- `fleet-ops` commits: vessel data, protocols, bin scripts
-- `The-Nexus` commits: indexes, standards, vision updates
-- Never commit venvs, `__pycache__`, `.pyc`, `.DS_Store`
-- All fleet repos are private by default
+Would you like me to expand the START-HERE.md with registration instructions, or continue with the next piece of the rework?
