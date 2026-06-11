@@ -1,0 +1,47 @@
+{
+  "dashboards/dashboard-hud.js": {
+    "mtime": 1781137909.546408,
+    "ast_hash": "a87e303ac031b1d5e783921c3e64fe48",
+    "semantic_hash": "a87e303ac031b1d5e783921c3e64fe48"
+  },
+  "dashboards/dashboard.py": {
+    "mtime": 1781137909.546408,
+    "ast_hash": "241d2e53f028c41473e39cb9e2a1c757",
+    "semantic_hash": "241d2e53f028c41473e39cb9e2a1c757"
+  },
+  "dashboards/dashboard.rs": {
+    "mtime": 1781137909.5474076,
+    "ast_hash": "a06d0ef9ca44e26ba246712da412cf7c",
+    "semantic_hash": "a06d0ef9ca44e26ba246712da412cf7c"
+  },
+  "dashboards/dashboard_v2.py": {
+    "mtime": 1781137909.548409,
+    "ast_hash": "49e528654fa145ee79d7691d27997c32",
+    "semantic_hash": "49e528654fa145ee79d7691d27997c32"
+  },
+  "dashboards/dashboard_v3.py": {
+    "mtime": 1781137909.548409,
+    "ast_hash": "47ae131283fc74d673ae12ee1fe1c727",
+    "semantic_hash": "47ae131283fc74d673ae12ee1fe1c727"
+  },
+  "dashboards/grafana-dashboard.json": {
+    "mtime": 1781137909.5544078,
+    "ast_hash": "f4d6eaa1e99cd61aa9526b04193bd816",
+    "semantic_hash": "f4d6eaa1e99cd61aa9526b04193bd816"
+  },
+  "dashboards/hud_dashboard.py": {
+    "mtime": 1781137909.5554097,
+    "ast_hash": "5309cdb09759400ed03d0c4ea6861f77",
+    "semantic_hash": "5309cdb09759400ed03d0c4ea6861f77"
+  },
+  "dashboards/test_dashboard.py": {
+    "mtime": 1781137909.5564084,
+    "ast_hash": "2209ccecf55eac744cf7179d155f04c0",
+    "semantic_hash": "2209ccecf55eac744cf7179d155f04c0"
+  },
+  "vessel-template/profile.json": {
+    "mtime": 1781137909.5594115,
+    "ast_hash": "45f40428294a873d998e73308f2e848f",
+    "semantic_hash": "45f40428294a873d998e73308f2e848f"
+  }
+}
