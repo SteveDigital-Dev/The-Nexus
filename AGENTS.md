@@ -80,4 +80,18 @@ When the user requests a durable behavior change, record it here or in the relev
 
 ## Child DOX Index
 
-This project is not yet indexed. Before continuing you must scan the project, build the DOX tree and replace this message with the actual index. Go deep and scan files recursively to properly evaluate complexity and create nested DOX files where needed.
+| Path | Scope |
+|------|-------|
+| [indexes/AGENTS.md](indexes/AGENTS.md) | Read-only fleet reference indexes — vessels, services, skills, repos |
+| [dashboards/AGENTS.md](dashboards/AGENTS.md) | Fleet visibility UIs — Python, Rust, JS, HTML, Grafana implementations |
+| [vessel-template/AGENTS.md](vessel-template/AGENTS.md) | Canonical vessel profile template for fleet onboarding |
+
+Root-owned files (no child doc needed):
+- `README.md` — Navigation hub and quick reference
+- `START-HERE.md` — Onboarding entry point for new vessels/agents
+- `VISION.md` — Direction, Agent OS philosophy, Archivist role
+- `FLEET-INDEX.md` — Node roster, topology overview
+- `FLEET-STANDARD.md` — Naming conventions, vessel index rules, Kanban, onboarding
+- `PROJECT-INDEX.md` — Full categorized project/repo list
+- `SKILL-INDEX.md` — Active skill catalog
+- `TOOLBOX-SYSTEM.md` — Toolbox system reference
