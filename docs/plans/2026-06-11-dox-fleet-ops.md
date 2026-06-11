@@ -4,7 +4,7 @@
 **Priority:** High  
 **Repo:** `/mnt/DATA/Git/SteveDigital Projects/fleet-ops`  
 **Why:** Vessel submodules, orchestrator scripts, and bin tools are touched regularly by fleet agents. No existing AGENTS.md. Contracts prevent cross-vessel contamination and protect profile schemas.  
-**Status:** ⬜ Not started
+**Status:** ✅ Complete — 2026-06-11
 
 ---
 
