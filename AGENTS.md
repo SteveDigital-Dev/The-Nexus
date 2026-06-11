@@ -85,6 +85,7 @@ When the user requests a durable behavior change, record it here or in the relev
 | [indexes/AGENTS.md](indexes/AGENTS.md) | Read-only fleet reference indexes — vessels, services, skills, repos |
 | [dashboards/AGENTS.md](dashboards/AGENTS.md) | Fleet visibility UIs — Python, Rust, JS, HTML, Grafana implementations |
 | [vessel-template/AGENTS.md](vessel-template/AGENTS.md) | Canonical vessel profile template for fleet onboarding |
+| [graphify-out/AGENTS.md](graphify-out/AGENTS.md) | Auto-generated knowledge graph outputs — do not hand-edit |
 
 Root-owned files (no child doc needed):
 - `README.md` — Navigation hub and quick reference
