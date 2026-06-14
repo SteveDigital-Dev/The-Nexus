@@ -25,7 +25,7 @@ This is the official skill index for the fleet. All agents, vessels, and CLI too
 - **call-for-help** — Official protocol for when local trust is low.
 
 ### Additional Skills from private-agent-library
-(Full list maintained by the Archivist — see registry/skill_index.json for complete index)
+(Full list maintained by the Archivist — see `private-agent-library/registry/skills_index.db` (SQLite FTS5) for the complete skill index, and `private-agent-library/capabilities/library-surface/toolboxes.json` for discipline-based toolbox groupings, served via MCP resource `library://toolboxes`)
 
 ## Onboard Projects, Repos, and Papers Reporting
 All agents and vessels must report:

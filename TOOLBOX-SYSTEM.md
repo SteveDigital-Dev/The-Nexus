@@ -41,6 +41,33 @@ This creates:
 - `med-suite` — Medical research, clinical trials, holistic data (from clawd).
 - `game-dev` — Godot, Unity, Unreal workflows.
 
+## Implementation Status (2026-06-14)
+
+The conceptual toolboxes above describe the target discipline groupings. The **canonical, machine-readable implementation** is `private-agent-library/capabilities/library-surface/toolboxes.json` (28 toolboxes, schema: `name`, `description`, `preferredSources`, `hotAssets`), served live via the MCP resource `library://toolboxes` (`mcp_server/server.py`).
+
+Closest mapping from concept → implemented toolbox name:
+
+| Concept (this doc) | Implemented toolbox(es) |
+|---|---|
+| archivist | `local-retrieval-memory`, `rag-knowledge`, `context-systems` |
+| system-ops | `local-diagnostics`, `claudia-diagnostics` |
+| network-fleet | `local-project-ops` |
+| security-hardening | `mika-audits` |
+| storage-backup | `local-repo-custodian`, `mika-repo-maintenance` |
+| cli-anything | `local-coding-core`, `coding-core` |
+| research-pipeline | `local-research-ops`, `synthesis-generation` |
+| code-orchestration | `multi-agent-coordination`, `meta-agentics` |
+| ai-scientist | `temporal-prediction`, `compression-optimization` |
+| media-pipeline | `frontend-ui` |
+| writing-synthesis | `synthesis-generation` |
+| med-suite, game-dev | not yet represented — no dedicated toolbox |
+
+Other related artifacts:
+- **Skill full-text search**: `private-agent-library/registry/skills_index.db` (SQLite FTS5) — canonical skill index, updated by `scripts/rag/sync_rag.py`
+- **Routing**: `scripts/agentics/route_local_task.py` maps task-type keywords to a toolbox name per machine profile (`configs/systems/<os>/<host>/routing.json`)
+
+Do not create new `toolboxes.json` or `skill_index.json` files elsewhere — earlier duplicates in `registry/` and `db/` were removed 2026-06-14 as dead/unused.
+
 ## How It Works
 1. **Registration** — New skills must declare their toolbox in SKILL.md frontmatter (`toolbox: system-ops`).
 2. **Loading** — Agents load toolboxes via `skill-loader load toolbox:system-ops`.
