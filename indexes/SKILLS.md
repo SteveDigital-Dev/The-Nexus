@@ -1,5 +1,5 @@
 # Fleet Skills Index
-**Updated:** 2026-06-10
+**Updated:** 2026-06-14
 
 XO skills live in two places:
 - **`~/clawd/skills/`** — Active skills running on Claudia
@@ -71,7 +71,7 @@ ollama run infraops-orchestrator "Describe fleet topology"
 ## Private Agent Library
 
 Large curated catalog at `private-agent-library/skills/` (sdigits: `/mnt/DATA/Git/private-agent-library/skills/`).  
-1543 registered skills. Contains specialist agents across: engineering, finance, security, data, UX, VR/AR, physics, and more.  
+881 registered skills (top-level directories under `skills/`; count via `ls private-agent-library/skills/ | wc -l`). Contains specialist agents across: engineering, finance, security, data, UX, VR/AR, physics, and more.  
 Sub-categories: `aa-eng-*`, `aa-spec-*`, `ua-*`, `ec-*`, `gsd-*`, `ouroboros-*`
 
 ```bash
