@@ -1,6 +1,6 @@
 # Fleet Index
 
-**Last Updated:** 2026-06-10  
+**Last Updated:** 2026-06-18  
 **Maintained by:** The Archivist / Aria  
 **Purpose:** Topology overview — IPs, roles, models, Hermes profiles, cross-repo links  
 **Per-vessel detail:** `indexes/VESSELS.md` · `indexes/SERVICES.md`
@@ -28,7 +28,7 @@
 - **Services:** Ollama :11434 (33 local + 6 cloud), Hermes gateway, MCP host (25 servers), RAG host
 - **SSH:** `ssh sdigits` (user: `sdigits`)
 - **Hermes profile:** local (default)
-- **Fleet profile:** `private-agent-library/fleet/sdigits/profile.json`
+- **Fleet profile:** `vessel-sdigits/profile.json`
 
 ### claudia — M4 Mac Mini / Primary Inference Node
 - **Device:** Apple Mac mini (2024) · M4 GPU / Metal
@@ -36,7 +36,7 @@
 - **Services:** Ollama :11434 (73 models at `/Volumes/DATA/ollama`), Med Suite :7755, ChromaDB :8000, Kokoro TTS :40001, OpenClaw :18789, LM Studio :1234
 - **SSH:** `ssh claudia` (user: `digital`)
 - **Hermes profile:** *(not yet wired)*
-- **Fleet profile:** `private-agent-library/fleet/claudia/system/machine-db.json`
+- **Fleet profile:** `vessel-claudia/profile.json`
 - **Detail:** `indexes/VESSELS.md#claudia` · `indexes/SERVICES.md#claudia`
 
 ### thoth — Control Plane / Hermes Gateway
@@ -45,7 +45,7 @@
 - **Services:** Hermes gateway, ChromaDB :8000, Ollama :11434, Portainer-agent :9001, file-server :8090, Docker
 - **SSH:** `ssh thoth` (user: `sdigits`)
 - **Hermes profile:** *(not yet wired)*
-- **Fleet profile:** `private-agent-library/fleet/thoth/system/machine-db.json`
+- **Fleet profile:** `vessel-thoth/profile.json`
 
 ### nirto5-1 — Windows GPU Node
 - **Device:** Acer Nitro 5 (AN515-54) · NVIDIA RTX 2060 Mobile 6 GB (CUDA)
@@ -53,7 +53,7 @@
 - **Services:** Ollama :11434 (GPU-accelerated)
 - **SSH:** `ssh nirto5-1` (user: `steve`) · `100.124.34.87`
 - **Hermes profile:** `hermes -p nirto5-1` (SSH backend, CWD: `C:/Users/steve`)
-- **Fleet profile:** `private-agent-library/fleet/nirto5-1/system/machine-db.json`
+- **Fleet profile:** `vessel-nirto5-1/profile.json`
 
 ### mintbookpro — Research Library Node
 - **Device:** MacBook Pro 13" Mid 2012 (candidate) · Intel HD 4000
@@ -61,12 +61,12 @@
 - **Services:** Ollama :11434 (79 models, CPU), Nextcloud :8080 (Docker), Samba :139/445
 - **SSH:** `ssh mintbookpro` (user: `sdigits`) · LAN: `192.168.68.52`
 - **Hermes profile:** *(not yet wired)*
-- **Fleet profile:** `private-agent-library/fleet/mintbookpro/system/machine-db.json`
+- **Fleet profile:** `vessel-mintbookpro/profile.json`
 
 ### dj — Audio/Mood Synthesis Engine
 - **Role:** Podcast automation, audio mastering, mood synthesis
 - **Status:** Tailnet auth blocked — not accessible
-- **Fleet profile:** `private-agent-library/fleet/dj/profile.json`
+- **Fleet profile:** `vessel-dj/profile.json`
 
 ---
 
@@ -103,9 +103,14 @@ Skills: `private-agent-library/skills/infraops-*-model/SKILL.md`
 
 | Repo | Path (sdigits) | Purpose |
 |------|----------------|---------|
-| The-Nexus | `/mnt/DATA/Git/The-Nexus` | Central index, standards, this file |
+| The-Nexus | `/mnt/DATA/Git/The-Nexus` | Central index, standards, vessel docs |
 | private-agent-library | `/mnt/DATA/Git/private-agent-library` | Skills, models, dashboards, fleet profiles, registry |
-| fleet-ops | `/mnt/DATA/Git/SteveDigital Projects/fleet-ops` | Per-vessel submodules, fleet.py orchestrator |
+| vessel-sdigits | `/mnt/DATA/Git/vessel-sdigits` | sdigits vessel repo |
+| vessel-thoth | `/mnt/DATA/Git/vessel-thoth` | thoth vessel repo |
+| vessel-claudia | `/mnt/DATA/Git/vessel-claudia` | claudia vessel repo |
+| vessel-nirto5-1 | `/mnt/DATA/Git/vessel-nirto5-1` | nirto5-1 vessel repo |
+| vessel-mintbookpro | `/mnt/DATA/Git/vessel-mintbookpro` | mintbookpro vessel repo |
+| vessel-dj | `/mnt/DATA/Git/vessel-dj` | dj vessel repo |
 | aria-obsidian | `/mnt/DATA/Git/aria-obsidian` | Primary Obsidian knowledge vault |
 
 Full repo catalog: [PROJECT-INDEX.md](PROJECT-INDEX.md)
@@ -135,3 +140,166 @@ Full repo catalog: [PROJECT-INDEX.md](PROJECT-INDEX.md)
 | dj | — | — | — | — | — |
 
 Detail docs live in `fleet-ops/<vessel>/system/` per FLEET-STANDARD.md.
+
+---
+
+## Repository Coverage (DOX + Graphify)
+
+> Generated: 2026-06-18 · 134 repos (after symlink dedup)  
+> DOX coverage: 134/134 (100%) ✓  
+> Graphify coverage: 129/134 (96%)
+
+- DOX ✓ — AGENTS.md present at repo root
+- Graph ✓ — graphify-out/graph.json built
+
+### SteveDigital Projects
+
+| Repo | Last Commit | DOX | Graph |
+|------|-------------|-----|-------|
+| 00-master-index | 7 days ago | ✓ | ✓ |
+| BH | 7 days ago | ✓ | ✓ |
+| Centaur-Beta | 7 days ago | ✓ | ✓ |
+| ClawTeam-OpenClaw | 7 days ago | ✓ | ✓ |
+| CoLT5-Evolved | 7 days ago | ✓ | ✓ |
+| ComfyUI-Agent-Bridge | 7 days ago | ✓ | ✓ |
+| Euro-Pi | 7 days ago | ✓ | ✓ |
+| HarmonySystem | 7 days ago | ✓ | ✓ |
+| MGS-UI | 7 days ago | ✓ | ✓ |
+| Omni-Fabric-Optimizer | 7 days ago | ✓ | ✓ |
+| OpenClaw-CyberDeck | 7 days ago | ✓ | ✓ |
+| SteveDigital-Dev | 7 days ago | ✓ | ✗ |
+| TinyTroupe | 7 days ago | ✓ | ✓ |
+| Vibe-Void | 5 months ago | ✓ | ✓ |
+| aether-forge | 7 days ago | ✓ | ✓ |
+| agent-academy | 7 days ago | ✓ | ✓ |
+| agent-assistant | 7 days ago | ✓ | ✓ |
+| agent-coding-software-dev | 7 days ago | ✓ | ✓ |
+| agent-comms-marketing-seo | 7 days ago | ✓ | ✓ |
+| agent-finance-market-business | 7 days ago | ✓ | ✓ |
+| agent-game-dev-3d-interactive | 7 days ago | ✓ | ✓ |
+| agent-hardware-electronics-diy | 7 days ago | ✓ | ✓ |
+| agent-health-med-wellness | 7 days ago | ✓ | ✓ |
+| agent-infrastructure | 7 days ago | ✓ | ✓ |
+| agent-knowledge-base | 7 days ago | ✓ | ✓ |
+| agent-meta-os-governance | 7 days ago | ✓ | ✓ |
+| agent-ml-research-rag | 7 days ago | ✓ | ✓ |
+| agent-multimedia-audio-music | 7 days ago | ✓ | ✓ |
+| agent-os | 7 days ago | ✓ | ✓ |
+| agent-science-physics-math | 7 days ago | ✓ | ✓ |
+| agent-security-safety-audit | 7 days ago | ✓ | ✓ |
+| agent-senior-standards | 7 days ago | ✓ | ✓ |
+| agent-skill-hunter | 7 days ago | ✓ | ✓ |
+| agent-sysadmin-os-infra | 7 days ago | ✓ | ✓ |
+| agent-visual-video-gen | 7 days ago | ✓ | ✓ |
+| agentflow-studio | 7 days ago | ✓ | ✓ |
+| ai-agent-tester | 7 days ago | ✓ | ✓ |
+| ancient-tomes | 7 days ago | ✓ | ✓ |
+| art-design-ux-architect | 7 days ago | ✓ | ✓ |
+| auto-doc-generator | 7 days ago | ✓ | ✓ |
+| awesome-openclaw-skills | 7 days ago | ✓ | ✓ |
+| black-rock | 7 days ago | ✓ | ✓ |
+| blender-clean-nosmudge | 7 days ago | ✓ | ✓ |
+| bolt.diy | 7 days ago | ✓ | ✓ |
+| cipher-obsidian | 5 weeks ago | ✓ | ✓ |
+| circuit_forge | 7 days ago | ✓ | ✓ |
+| claude-code | 7 days ago | ✓ | ✓ |
+| claude-obsidian | 5 weeks ago | ✓ | ✓ |
+| claude-octopus | 5 weeks ago | ✓ | ✓ |
+| clawd | 7 days ago | ✓ | ✓ |
+| clawd-products | 7 days ago | ✓ | ✓ |
+| cli-engine | 7 days ago | ✓ | ✓ |
+| cmd-claude-flow-swarm | 7 days ago | ✓ | ✓ |
+| codex-lenovo-config | 7 days ago | ✓ | ✓ |
+| comfyui-hunyuan3d-colab | 7 days ago | ✓ | ✓ |
+| content-automation | 7 days ago | ✓ | ✓ |
+| devops-cli-bundle | 7 days ago | ✓ | ✓ |
+| dungeon_world | 7 days ago | ✓ | ✓ |
+| exp-mlx_autoresearch_loop | 7 days ago | ✓ | ✓ |
+| exp-research-openfang | 7 days ago | ✓ | ✓ |
+| fleet-ops | 7 days ago | ✓ | ✓ |
+| fleetcode | 7 days ago | ✓ | ✓ |
+| gemini-cli | 7 days ago | ✓ | ✓ |
+| gemini-cli-agent | 7 days ago | ✓ | ✓ |
+| gemini-obsidian | 9 weeks ago | ✓ | ✓ |
+| harmony-turboquant | 7 days ago | ✓ | ✓ |
+| hawk-obsidian | 7 days ago | ✓ | ✓ |
+| homunculus | 7 days ago | ✓ | ✓ |
+| kimi-cli | 5 weeks ago | ✓ | ✓ |
+| lenovo-bytebot | 7 days ago | ✓ | ✓ |
+| lenovo-chatdev | 7 days ago | ✓ | ✓ |
+| lenovo-framework | 7 days ago | ✓ | ✗ |
+| local-deep-researcher | 7 days ago | ✓ | ✓ |
+| micro-saas-starter | 7 days ago | ✓ | ✓ |
+| oh-my-openagent | 5 weeks ago | ✓ | ✓ |
+| openclaw-foundry | 7 days ago | ✓ | ✓ |
+| openclaw-main | 7 days ago | ✓ | ✓ |
+| orch-agents-orchestrator | 7 days ago | ✓ | ✓ |
+| outside-the-box | 7 days ago | ✓ | ✓ |
+| photoshop-clone | 4 months ago | ✓ | ✓ |
+| physics-team | 7 days ago | ✓ | ✓ |
+| pi-lenovo-config | 7 days ago | ✓ | ✓ |
+| private-agent-library | 6 days ago | ✓ | ✓ |
+| project-cerberus | 7 days ago | ✓ | ✓ |
+| quorum | 7 days ago | ✓ | ✓ |
+| qwen-code | 5 weeks ago | ✓ | ✓ |
+| qwen-lenovo-config | 7 days ago | ✓ | ✓ |
+| ralph | 5 weeks ago | ✓ | ✓ |
+| rook | 7 days ago | ✓ | ✓ |
+| sdigits-dotfiles | 7 days ago | ✓ | ✓ |
+| slack-bot-starter | 7 days ago | ✓ | ✓ |
+| soprano | 7 days ago | ✓ | ✓ |
+| stash | 7 days ago | ✓ | ✓ |
+| studio-fleet | 7 days ago | ✓ | ✓ |
+| team-mika | 7 days ago | ✓ | ✓ |
+| the-grid | 5 months ago | ✓ | ✓ |
+| thoth-framework | 7 days ago | ✓ | ✓ |
+| tool-tracker | 7 days ago | ✓ | ✓ |
+| touchpad-ui-lenovo | 7 days ago | ✓ | ✓ |
+| vibe-lenovo-config | 7 days ago | ✓ | ✓ |
+| voice-pipeline-lenovo | 7 days ago | ✓ | ✓ |
+| worldmonitor | 7 days ago | ✓ | ✓ |
+
+### Top-Level (/mnt/DATA/Git/)
+
+| Repo | Last Commit | DOX | Graph |
+|------|-------------|-----|-------|
+| AutoGPT | 4 weeks ago | ✓ | ✓ |
+| The-Nexus | 4 days ago | ✓ | ✓ |
+| agent-vaults | 6 days ago | ✓ | ✓ |
+| aria-obsidian | 3 weeks ago | ✓ | ✓ |
+| claude-code | 4 weeks ago | ✓ | ✗ |
+| claude-mem | 4 weeks ago | ✓ | ✓ |
+| claude-obsidian | 8 weeks ago | ✓ | ✓ |
+| claude-octopus | 4 weeks ago | ✓ | ✓ |
+| claw-code-parity | 2 months ago | ✓ | ✓ |
+| dox | 6 days ago | ✓ | ✓ |
+| everything-claude-code | 4 weeks ago | ✓ | ✓ |
+| kicad-source | 4 weeks ago | ✓ | ✗ |
+| lenovo-z | 5 weeks ago | ✓ | ✗ |
+| mcp-server-docker | 5 weeks ago | ✓ | ✓ |
+| open-claude-cowork | 7 weeks ago | ✓ | ✓ |
+| ouroboros | 4 weeks ago | ✓ | ✓ |
+| portless | 4 weeks ago | ✓ | ✓ |
+| private-agent-library | 35 hours ago | ✓ | ✓ |
+| qmd | 7 days ago | ✓ | ✓ |
+| ralph | 5 months ago | ✓ | ✓ |
+| relay | 4 weeks ago | ✓ | ✓ |
+| seomachine | 10 weeks ago | ✓ | ✓ |
+| superpowers | 6 weeks ago | ✓ | ✓ |
+| task-orchestrator | 4 weeks ago | ✓ | ✓ |
+| threejs-skills | 5 months ago | ✓ | ✓ |
+| vessel-claudia | 7 days ago | ✓ | ✓ |
+| vessel-clauds | 7 days ago | ✓ | ✓ |
+| vessel-dj | 7 days ago | ✓ | ✓ |
+| vessel-mintbookpro | 7 days ago | ✓ | ✓ |
+| vessel-nirto5-1 | 7 days ago | ✓ | ✓ |
+| vessel-sdigits | 7 days ago | ✓ | ✓ |
+| vessel-thoth | 7 days ago | ✓ | ✓ |
+
+### Graph Gaps
+
+- **SteveDigital-Dev** — needs graphify run
+- **lenovo-framework** — hardware config, low priority
+- **claude-code** (top-level mirror) — external upstream, skip
+- **kicad-source** — large EDA source, skip
+- **lenovo-z** — intentional skip (11k+ file aggregation folder)
