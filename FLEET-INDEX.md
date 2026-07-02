@@ -69,7 +69,7 @@
 - **Services:** Ollama :11434 (5 local + 9 cloud, `X:\AI\Ollama Models`), SwarmUI :7801, ComfyUI Desktop :8000 (on demand), SSH :22, RDP :3389, Docker (MCP sandboxes)
 - **SSH:** `ssh dj` (user: `St3v3`) · `100.112.235.121`
 - **Hermes profile:** *(not yet wired)*
-- **Fleet profile:** `vessel-dj/profile.json` · surveyed copy: `fleet-ops/dj/profile.json` (v2.0.0) · system docs: `fleet-ops/dj/system/`
+- **Fleet profile:** [`vessel-dj`](https://github.com/SteveDigital-Dev/vessel-dj) (`profile.json` v2.0.0 + `system/` docs — first vessel repo on GitHub) · mirror: `fleet-ops/dj/`
 - **Note:** Rebuilt 2026 — formerly a 4 GB virtual "audio/mood" node; surveyed on-vessel 2026-07-02. ⚠️ C: drive nearly full (14 GB free).
 
 ---
