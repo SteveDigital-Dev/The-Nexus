@@ -117,9 +117,26 @@
 
 ## dj
 
-**Profile:** `fleet-ops/dj/profile.json` (v1.0.0)  
-**Role:** Virtual node  
-**Status:** ⚪ offline
+**Profile:** `fleet-ops/dj/profile.json` (v2.0.0)  
+**Role:** GPU Workstation / Creative Production Node  
+**Status:** ✅ active — surveyed on-vessel 2026-07-02
+
+| Field | Value |
+|-------|-------|
+| Hostname | `DJ` |
+| Tailscale | `dj` · `100.112.235.121` (+ `dj-docker-desktop` · `100.91.125.45`) |
+| OS | Windows 10 Pro, build 19045 |
+| CPU | AMD Ryzen 5 2600X (6C/12T) |
+| RAM | 32 GB |
+| GPU | **NVIDIA RTX 4070 12 GB** (driver 591.74) — strongest GPU in fleet |
+| Storage | C: 953 GB (⚠️ 14 GB free) · X: "DATA" 5.59 TB (2.79 TB free) |
+| SSH user | `St3v3` |
+| Ollama models | 5 local (56.7 GB at `X:\AI\Ollama Models`) + 9 cloud aliases |
+
+**Services:** ollama (:11434), SwarmUI (:7801), ComfyUI Desktop (:8000, on demand), sshd (:22), RDP (:3389), Docker Desktop (MCP sandboxes), KIWIX library (`X:\KIWIX`, 47 ZIMs / 75 GB)  
+**Engines:** Unreal 5.4 + 5.5, Godot 4.6.2, Blender 4.2 — plus meta-gen/blend-gen pipelines and the `X:\AI\Agents` ComfyUI/Blender MCP workspace  
+**System docs:** `fleet-ops/dj/system/` → PROJECTS.md · SERVICES.md · OLLAMA_MODELS.md · STORAGE.md  
+**History:** Formerly listed as a 4 GB virtual "audio/mood synthesis" node (offline since 2026-05-27). Rebuilt as a physical GPU workstation; old audio-skill contributions predate the rebuild.
 
 ---
 
@@ -134,6 +151,7 @@
 | thoth | ✅ `system/PROJECTS.md` | ✅ `system/REPOS.md` | ✅ `system/PAPERS.md` | ✅ `system/SERVICES.md` |
 | nirto5-1 | ❌ missing | ❌ missing | ❌ missing | ❌ missing |
 | mintbookpro | ✅ `system/PROJECTS.md` | ✅ `system/REPOS.md` | ✅ `system/PAPERS.md` | ✅ `system/SERVICES.md` |
+| dj | ✅ `system/PROJECTS.md` | ❌ missing | ❌ missing | ✅ `system/SERVICES.md` |
 
 See `FLEET-STANDARD.md` → Vessel Index Requirement for the format.
 

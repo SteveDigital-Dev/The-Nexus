@@ -16,7 +16,7 @@
 | thoth | Linux Mint 22.3 | AMD A4-4300M (2C/2T) | 7.0 GB | 100.72.231.127 | ONLINE |
 | nirto5-1 | Windows 11 | Intel i5-9300H (4C/8T) | 24 GB | 100.124.34.87 | ONLINE |
 | mintbookpro | Linux Mint 22.3 | Intel i5-3210M (2C/4T) | 15.5 GB | 100.103.62.96 | ONLINE |
-| dj | AgentOS-Creative-Layer | virtual | 4 GB | 100.112.235.121 | TAILNET-AUTH-BLOCKED |
+| dj | Windows 10 Pro (19045) | AMD Ryzen 5 2600X (6C/12T) | 32 GB | 100.112.235.121 | ONLINE |
 
 ---
 
@@ -63,10 +63,14 @@
 - **Hermes profile:** *(not yet wired)*
 - **Fleet profile:** `vessel-mintbookpro/profile.json`
 
-### dj — Audio/Mood Synthesis Engine
-- **Role:** Podcast automation, audio mastering, mood synthesis
-- **Status:** Tailnet auth blocked — not accessible
-- **Fleet profile:** `vessel-dj/profile.json`
+### dj — GPU Workstation / Creative Production Node
+- **Device:** Custom desktop · AMD Ryzen 5 2600X · **NVIDIA RTX 4070 12 GB** (strongest GPU in fleet) · 32 GB RAM · 5.6 TB DATA drive
+- **Role:** Image/3D generation, game-engine work (UE 5.4/5.5, Godot 4.6, Blender 4.2), local LLM inference, KIWIX offline library host
+- **Services:** Ollama :11434 (5 local + 9 cloud, `X:\AI\Ollama Models`), SwarmUI :7801, ComfyUI Desktop :8000 (on demand), SSH :22, RDP :3389, Docker (MCP sandboxes)
+- **SSH:** `ssh dj` (user: `St3v3`) · `100.112.235.121`
+- **Hermes profile:** *(not yet wired)*
+- **Fleet profile:** `vessel-dj/profile.json` · surveyed copy: `fleet-ops/dj/profile.json` (v2.0.0) · system docs: `fleet-ops/dj/system/`
+- **Note:** Rebuilt 2026 — formerly a 4 GB virtual "audio/mood" node; surveyed on-vessel 2026-07-02. ⚠️ C: drive nearly full (14 GB free).
 
 ---
 
@@ -137,7 +141,7 @@ Full repo catalog: [PROJECT-INDEX.md](PROJECT-INDEX.md)
 | thoth | ✅ | ✅ | ✅ | ✅ | ❌ not wired |
 | nirto5-1 | ❌ | ❌ | ❌ | ❌ | ✅ wired |
 | mintbookpro | ✅ | ✅ | ✅ | ✅ | ❌ not wired |
-| dj | — | — | — | — | — |
+| dj | ✅ | ❌ | ❌ | ✅ | ❌ not wired |
 
 Detail docs live in `fleet-ops/<vessel>/system/` per FLEET-STANDARD.md.
 

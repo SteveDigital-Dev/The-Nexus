@@ -29,7 +29,7 @@ The Nexus is the central index and control plane for the XO fleet. It does not d
 | [thoth](indexes/VESSELS.md#thoth) | Captain bridge / control plane / RAG host | ✅ active |
 | [nirto5-1](indexes/VESSELS.md#nirto5-1) | GPU workstation / CUDA inference | ✅ active |
 | [mintbookpro](indexes/VESSELS.md#mintbookpro) | Academy cadets / Docker host | ✅ active |
-| [dj](indexes/VESSELS.md#dj) | Virtual node | ⚪ offline |
+| [dj](indexes/VESSELS.md#dj) | GPU workstation (RTX 4070 12GB) / creative production | ✅ active |
 
 ---
 
