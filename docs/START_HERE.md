@@ -40,6 +40,16 @@ It is not the execution layer. It points to the repos that already do the work.
 - `D:\GitHub\ComfyUI-OpenClaw`
 - `D:\GitHub\mesh2motion-app`
 
+### Digital production pipeline
+- `D:\GitHub\meta-gen` — multi-DCC generation pipeline: blend-gen (Blender/port 9876 ✅), ue-gen (UE5 in progress), uni-gen (Unity), godogen (Godot)
+
+## Fleet operations
+
+- `fleet-pull.ps1` — pulls all fleet repos in one shot. Run with:
+  ```
+  powershell -ExecutionPolicy Bypass -File "C:\Users\Steve Digital\.openclaw\workspace\fleet-pull.ps1"
+  ```
+
 ## Read next
 
 - `VISION.md` — strategic direction

@@ -50,6 +50,19 @@ Notes:
 - `D:\GitHub\ComfyUI-OpenClaw`
 - `D:\GitHub\mesh2motion-app`
 
+## Digital production pipeline
+
+- `D:\GitHub\meta-gen` — multi-DCC generation pipeline hub
+  - `blend-gen` — Blender integration via blender-mcp socket server (port 9876) ✅ working
+  - `ue-gen` — UE5 integration via Python Remote Execution (UDP 6766) 🔧 in progress
+  - `uni-gen` — Unity integration (planned)
+  - `godogen` — Godot integration (planned)
+  - UE5 project: `D:\Unreal Projects\MyProject` (UE 5.5, RemoteControl + PythonScriptPlugin enabled)
+
+## Fleet tooling
+
+- `fleet-pull.ps1` (Nexus root) — pulls all fleet repos in one shot
+
 ## Current local auto-rigging candidate
 
 Best current candidate:
