@@ -20,7 +20,7 @@ The Nexus is the central index and control plane for the XO fleet. It does not d
 
 ## Fleet at a Glance
 
-**6 vessels** · **8 repos (sdigits/thoth) / 14 (claudia)** · **73 Ollama models on Claudia** · **946-doc RAG (Med Suite)**
+**6 vessels** · **8 repos (sdigits/thoth) / 15 (claudia)** · **73 Ollama models on Claudia** · **946-doc RAG (Med Suite)**
 
 | Vessel | Role | Status |
 |--------|------|--------|
@@ -36,7 +36,7 @@ The Nexus is the central index and control plane for the XO fleet. It does not d
 ## Sync the Fleet
 
 ```bash
-fleet-pull          # Pull this vessel's repos (per fleet-ops/bin/fleet-pull)
+fleet-pull          # Pull this vessel's tracked repos
 ```
 
 Script: `~/bin/fleet-pull` | Canonical: `fleet-ops/bin/fleet-pull`

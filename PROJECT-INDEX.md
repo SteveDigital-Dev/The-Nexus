@@ -1,7 +1,7 @@
 # Project Index
 
-**Last Updated:** 2026-06-10  
-**Total repos:** ~140 (101 SteveDigital-Dev GitHub + ~40 local/external)  
+**Last Updated:** 2026-07-16
+**Total repos:** ~170 (130 SteveDigital-Dev GitHub + ~40 local/external)
 **Maintained by:** The Archivist / Aria
 
 All repos live under `/mnt/DATA/Git/` — either at root or inside `SteveDigital Projects/`.
@@ -94,7 +94,7 @@ All repos live under `/mnt/DATA/Git/` — either at root or inside `SteveDigital
 |------|------|---------|
 | aria-obsidian | `/mnt/DATA/Git/aria-obsidian` | Primary Aria/Steve Obsidian knowledge vault |
 | agent-knowledge-base | `SteveDigital Projects/` | Agent knowledge base |
-| agent-vaults | `/mnt/DATA/Git/agent-vaults` | Agent Obsidian vaults root |
+| agent-vaults | `/mnt/DATA/Git/agent-vaults` | Agent Obsidian vaults root; GitHub: `SteveDigital-Dev/agent-vaults` |
 | claude-obsidian | `SteveDigital Projects/claude-obsidian` | Claude-specific Obsidian vault |
 | gemini-obsidian | `SteveDigital Projects/gemini-obsidian` | Gemini Obsidian vault |
 | hawk-obsidian | `SteveDigital Projects/hawk-obsidian` | Hawk agent Obsidian vault |

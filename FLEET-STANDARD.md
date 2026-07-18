@@ -63,3 +63,14 @@ I have pushed the changes to The-Nexus repository.
 The Quorum team has been updated with this official standard.
 
 Would you like me to expand the START-HERE.md with registration instructions, or continue with the next piece of the rework?
+---
+
+## 6. Index-Map Context Discipline
+
+Agent context is finite. Vessels and agents follow the index-map protocol:
+DOX `AGENTS.md` contracts per repo, graphify graphs where built, and
+per-machine CLAUDE.md files that are routing maps (≤60 lines), not fact dumps.
+Every fact lives in exactly one canonical index; everything else points.
+
+Full protocol: [docs/INDEX-MAP-PROTOCOL.md](docs/INDEX-MAP-PROTOCOL.md).
+Reference implementation: vessel claudia (2026-07-18).
