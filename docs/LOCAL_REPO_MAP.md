@@ -1,6 +1,18 @@
 # Local Repo Map
 
-This document makes The Nexus locally usable by pointing to the repos that already exist on this machine.
+This document makes The Nexus locally usable by pointing to repos observed on a
+specific vessel.
+
+## Scope
+
+This page is the **Nitro / Windows** local map rescued from `nitro-master`.
+Paths below use Windows drive roots such as `D:\GitHub`.
+
+For Claudia / macOS canonical fleet clones, use:
+
+- `~/clawd/AGENTS.md`
+- `~/clawd/The-Nexus/indexes/REPOS.md`
+- `~/clawd/fleet-ops/claudia/system/REPOS.md`
 
 ## Split-brain map
 
@@ -78,4 +90,5 @@ WSL / Docker / Podman runtime comparisons currently anchor in:
 
 ## Maintenance rule
 
-If a repo is renamed, moved, missing, or superseded, update this file and `docs\START_HERE.md` together.
+If a repo is renamed, moved, missing, or superseded, update this file and
+`docs\START_HERE.md` together.

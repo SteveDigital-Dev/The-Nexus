@@ -1,6 +1,9 @@
 # Start Here
 
 This repo is the local index layer for Steve Digital's fleet.
+This page is the Nitro / Windows start page rescued from `nitro-master`.
+For Claudia / macOS, start at `~/clawd/The-Nexus/START-HERE.md` and
+`~/clawd/AGENTS.md`.
 
 ## Purpose
 
