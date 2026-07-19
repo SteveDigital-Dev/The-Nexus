@@ -1,47 +1,192 @@
 {
   "dashboards/dashboard-hud.js": {
-    "mtime": 1781137909.546408,
-    "ast_hash": "a87e303ac031b1d5e783921c3e64fe48",
-    "semantic_hash": "a87e303ac031b1d5e783921c3e64fe48"
+    "mtime": 1780787386.887133,
+    "ast_hash": "ac826c17433c0111a7a917834bb58cf0",
+    "semantic_hash": ""
   },
   "dashboards/dashboard.py": {
-    "mtime": 1781137909.546408,
-    "ast_hash": "241d2e53f028c41473e39cb9e2a1c757",
-    "semantic_hash": "241d2e53f028c41473e39cb9e2a1c757"
+    "mtime": 1780787386.887243,
+    "ast_hash": "176c7d350c9f88d0729d5406c5986142",
+    "semantic_hash": ""
   },
   "dashboards/dashboard.rs": {
-    "mtime": 1781137909.5474076,
-    "ast_hash": "a06d0ef9ca44e26ba246712da412cf7c",
-    "semantic_hash": "a06d0ef9ca44e26ba246712da412cf7c"
+    "mtime": 1780787386.8873503,
+    "ast_hash": "ae7aa1f7d723c1bce9991a94b8e36d99",
+    "semantic_hash": ""
   },
   "dashboards/dashboard_v2.py": {
-    "mtime": 1781137909.548409,
-    "ast_hash": "49e528654fa145ee79d7691d27997c32",
-    "semantic_hash": "49e528654fa145ee79d7691d27997c32"
+    "mtime": 1780787386.8875072,
+    "ast_hash": "58951ebabbcd87ba309846386736a21e",
+    "semantic_hash": ""
   },
   "dashboards/dashboard_v3.py": {
-    "mtime": 1781137909.548409,
-    "ast_hash": "47ae131283fc74d673ae12ee1fe1c727",
-    "semantic_hash": "47ae131283fc74d673ae12ee1fe1c727"
+    "mtime": 1780787386.889582,
+    "ast_hash": "4c0e183a76c882843800d743aeb41c3e",
+    "semantic_hash": ""
   },
   "dashboards/grafana-dashboard.json": {
-    "mtime": 1781137909.5544078,
-    "ast_hash": "f4d6eaa1e99cd61aa9526b04193bd816",
-    "semantic_hash": "f4d6eaa1e99cd61aa9526b04193bd816"
+    "mtime": 1780787386.8918984,
+    "ast_hash": "f65a609402eafebab7bd77b5dd8d640b",
+    "semantic_hash": ""
   },
   "dashboards/hud_dashboard.py": {
-    "mtime": 1781137909.5554097,
-    "ast_hash": "5309cdb09759400ed03d0c4ea6861f77",
-    "semantic_hash": "5309cdb09759400ed03d0c4ea6861f77"
+    "mtime": 1780787386.891991,
+    "ast_hash": "35404f251c24ec0c55206940eb0ef318",
+    "semantic_hash": ""
   },
   "dashboards/test_dashboard.py": {
-    "mtime": 1781137909.5564084,
-    "ast_hash": "2209ccecf55eac744cf7179d155f04c0",
-    "semantic_hash": "2209ccecf55eac744cf7179d155f04c0"
+    "mtime": 1780787386.907463,
+    "ast_hash": "76c78ac6a3522ac338b994f0e12510ff",
+    "semantic_hash": ""
   },
   "vessel-template/profile.json": {
-    "mtime": 1781137909.5594115,
-    "ast_hash": "45f40428294a873d998e73308f2e848f",
-    "semantic_hash": "45f40428294a873d998e73308f2e848f"
+    "mtime": 1781184430.1648903,
+    "ast_hash": "22ab2a275fc5c0d4650eec65b5174cbf",
+    "semantic_hash": ""
+  },
+  "fleet-pull.ps1": {
+    "mtime": 1784385390.1598809,
+    "ast_hash": "04c7d5bd98cc581b68d1981ccbec0ff1",
+    "semantic_hash": ""
+  },
+  "AGENTS.md": {
+    "mtime": 1781184430.158174,
+    "ast_hash": "f32bfbdd1dd67d768774dd046b27214c",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1783030749.684564,
+    "ast_hash": "06919d96ae92d6e576f3ec21fcf3ec33",
+    "semantic_hash": ""
+  },
+  "FLEET-INDEX.md": {
+    "mtime": 1783030749.687065,
+    "ast_hash": "ae0ed5054b1209d8675233484a5dbe83",
+    "semantic_hash": ""
+  },
+  "FLEET-STANDARD.md": {
+    "mtime": 1784378760.7495892,
+    "ast_hash": "71aa216fab3316f5b3cd32b1c4bc6de2",
+    "semantic_hash": ""
+  },
+  "PROJECT-INDEX.md": {
+    "mtime": 1784498374.432902,
+    "ast_hash": "5c192c553fc13eee22742e8f7aa62e83",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1781184430.158811,
+    "ast_hash": "ad47ddc96d909c0fc4369b8864eb4e7c",
+    "semantic_hash": ""
+  },
+  "SKILL-INDEX.md": {
+    "mtime": 1784498374.4325128,
+    "ast_hash": "e3427127144753c2d7c1d4f02e9f8d3a",
+    "semantic_hash": ""
+  },
+  "START-HERE.md": {
+    "mtime": 1784498392.4489415,
+    "ast_hash": "888189f33dd71925da3e4d6f527ce53b",
+    "semantic_hash": ""
+  },
+  "TOOLBOX-SYSTEM.md": {
+    "mtime": 1783030749.7007058,
+    "ast_hash": "b549d65a48118c21272f220d9644417c",
+    "semantic_hash": ""
+  },
+  "VISION.md": {
+    "mtime": 1784385390.159664,
+    "ast_hash": "a8e7bd9e7c78938647ce16e4f47df927",
+    "semantic_hash": ""
+  },
+  "dashboards/AGENTS.md": {
+    "mtime": 1781184430.1590924,
+    "ast_hash": "ca82d21a2a2ef97a8380bbab2144f9b0",
+    "semantic_hash": ""
+  },
+  "dashboards/index.html": {
+    "mtime": 1780787386.9063141,
+    "ast_hash": "089940206a6f33472a0948130ef9b0cb",
+    "semantic_hash": ""
+  },
+  "dashboards/mat-dashboard.html": {
+    "mtime": 1780787386.9064753,
+    "ast_hash": "28a126e2d0bdb6d3e4ac3ffdfcf5a93c",
+    "semantic_hash": ""
+  },
+  "docs/INDEX-MAP-PROTOCOL.md": {
+    "mtime": 1784378747.1644385,
+    "ast_hash": "17d4f0f42720ed72d8a8a617d8de4751",
+    "semantic_hash": ""
+  },
+  "docs/LOCAL_REPO_MAP.md": {
+    "mtime": 1784385432.9271991,
+    "ast_hash": "7fcb915d935d68e5850d6d9aae15a4e1",
+    "semantic_hash": ""
+  },
+  "docs/START_HERE.md": {
+    "mtime": 1784385441.327112,
+    "ast_hash": "5caaac1f0d985394b11a93edf58c41f4",
+    "semantic_hash": ""
+  },
+  "docs/plans/2026-06-11-dox-agent-os.md": {
+    "mtime": 1781184430.159242,
+    "ast_hash": "813fc50ca7249c0fba0422a90a40204b",
+    "semantic_hash": ""
+  },
+  "docs/plans/2026-06-11-dox-fleet-ops.md": {
+    "mtime": 1781184430.1593347,
+    "ast_hash": "368bfe46743ca94ad4f638bdeddccf74",
+    "semantic_hash": ""
+  },
+  "docs/plans/2026-06-11-dox-private-agent-library.md": {
+    "mtime": 1781184430.159454,
+    "ast_hash": "04b2c5a4052e5597d2bad829302c1eb7",
+    "semantic_hash": ""
+  },
+  "docs/plans/2026-06-11-dox-project-cerberus.md": {
+    "mtime": 1781184430.1595602,
+    "ast_hash": "420c02bfb74a2f882b8a26c5f248ffaa",
+    "semantic_hash": ""
+  },
+  "docs/plans/2026-06-11-dox-quorum.md": {
+    "mtime": 1781184430.1596527,
+    "ast_hash": "645a63c4ab2ed4e081403d1bdb2742e4",
+    "semantic_hash": ""
+  },
+  "indexes/AGENTS.md": {
+    "mtime": 1781184430.1629584,
+    "ast_hash": "cd7999952529760234ecd661ce8eea4d",
+    "semantic_hash": ""
+  },
+  "indexes/REPOS.md": {
+    "mtime": 1784498374.4335961,
+    "ast_hash": "62869fc53a9671570ef922a2b366b4aa",
+    "semantic_hash": ""
+  },
+  "indexes/SERVICES.md": {
+    "mtime": 1781184430.1637478,
+    "ast_hash": "16c39ebce36b24137335fa77b708e588",
+    "semantic_hash": ""
+  },
+  "indexes/SKILLS.md": {
+    "mtime": 1784498996.3144884,
+    "ast_hash": "854f54a1b713acc99c9213939c728d8f",
+    "semantic_hash": ""
+  },
+  "indexes/VESSELS.md": {
+    "mtime": 1783030749.7029753,
+    "ast_hash": "da724828b4055b28eeddb075909bf6ef",
+    "semantic_hash": ""
+  },
+  "vessel-template/AGENTS.md": {
+    "mtime": 1781184430.1647654,
+    "ast_hash": "a62d0f393949ce88e8e58b1da109623f",
+    "semantic_hash": ""
+  },
+  "dashboards/e2b-dashboard.png": {
+    "mtime": 1780787386.890929,
+    "ast_hash": "bc79fbc1fef5ea7002abeb32fa2d0ef6",
+    "semantic_hash": ""
   }
 }
