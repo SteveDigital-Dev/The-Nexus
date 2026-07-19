@@ -1,5 +1,5 @@
 # The Nexus — START HERE
-**Updated:** 2026-06-14
+**Updated:** 2026-07-19
 
 The Nexus is the central index and control plane for the XO fleet. It does not duplicate data — it points to it.
 
@@ -14,6 +14,7 @@ The Nexus is the central index and control plane for the XO fleet. It does not d
 | Skills & agents catalog | [indexes/SKILLS.md](indexes/SKILLS.md) |
 | Running services & ports | [indexes/SERVICES.md](indexes/SERVICES.md) |
 | Standards & conventions | [FLEET-STANDARD.md](FLEET-STANDARD.md) |
+| Recovered Gemini/Pi coding stack | [indexes/SKILLS.md#coding-cli--local-agent-stack](indexes/SKILLS.md#coding-cli--local-agent-stack) |
 | Vision & direction | [VISION.md](VISION.md) |
 
 ---
@@ -47,6 +48,6 @@ Script: `~/bin/fleet-pull` | Canonical: `fleet-ops/bin/fleet-pull`
 
 **Starting a new vessel:** See [FLEET-STANDARD.md](FLEET-STANDARD.md) → Vessel Onboarding  
 **Adding a repo:** See [FLEET-STANDARD.md](FLEET-STANDARD.md) → Repo Protocol + update `fleet-pull` + this file  
-**Third-party repo conflict:** See `fleet-ops/FLEET_FORK_PROTOCOL.md`  
+**Third-party repo conflict:** keep `origin` on upstream; push Steve-local deltas to a preservation branch on the SteveDigital fork remote. See `fleet-ops/FLEET_FORK_PROTOCOL.md`
 **Medical queries:** `med serve` → http://127.0.0.1:7755  
 **OpenClaw skills:** `openclaw skills list --agent main`

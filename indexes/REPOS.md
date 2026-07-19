@@ -1,5 +1,5 @@
 # Fleet Repository Index
-**Updated:** 2026-07-17
+**Updated:** 2026-07-19
 
 Full catalog: **[PROJECT-INDEX.md](../PROJECT-INDEX.md)** (~170 repos, categorized)
 
@@ -26,6 +26,9 @@ Full catalog: **[PROJECT-INDEX.md](../PROJECT-INDEX.md)** (~170 repos, categoriz
 | fleet-ops | `/Users/digital/clawd/fleet-ops` | |
 | private-agent-library | `/Users/digital/clawd/repos/private-agent-library` | |
 | agent-vaults | `/Users/digital/clawd/repos/agent-vaults` | Agent Obsidian vaults; includes `aria-obsidian/wiki/ops.md` |
+| qwen-obsidian | `/Users/digital/clawd/repos/private-agent-library/qwen-obsidian` | PAL-local recovered Qwen RAG/wiki companion |
+| pi-specialist-harnesses | `/Users/digital/clawd/repos/private-agent-library/workflows/pi-specialist-harnesses` | PAL-local recovered Pi prompt harness mappings |
+| Pi Edition install | `/Users/digital/clawd/repos/private-agent-library/agent-os/pi-edition` | Local Raspberry Pi edge-node install path |
 | project-cerberus | `/Users/digital/clawd/project-cerberus` | |
 | med-suite | `/Users/digital/clawd/skills/med-suite` | Active skill — not in SteveDigital-Dev GitHub |
 | xo-modelfiles | `/Users/digital/clawd/xo-modelfiles` | Claudia-local Modelfiles |
@@ -61,7 +64,7 @@ Full catalog: **[PROJECT-INDEX.md](../PROJECT-INDEX.md)** (~170 repos, categoriz
 | Unreal_mcp | `/Users/digital/clawd/repos/Unreal_mcp` | upstream (ChiR24) → SteveDigital-Dev fork | dev |
 | ComfyUI-OpenClaw | `/Users/digital/clawd/repos/ComfyUI-OpenClaw` | upstream (rookiestar28) → SteveDigital-Dev fork | main |
 
-Fork protocol: `fleet-ops/FLEET_FORK_PROTOCOL.md`
+Fork protocol: `fleet-ops/FLEET_FORK_PROTOCOL.md`. For third-party repos, keep `origin` pointed at upstream and push only Steve-local preservation branches to a SteveDigital fork remote.
 
 ---
 

@@ -1,6 +1,6 @@
 # Project Index
 
-**Last Updated:** 2026-07-16
+**Last Updated:** 2026-07-19
 **Total repos:** ~170 (130 SteveDigital-Dev GitHub + ~40 local/external)
 **Maintained by:** The Archivist / Aria
 
@@ -67,6 +67,9 @@ All repos live under `/mnt/DATA/Git/` — either at root or inside `SteveDigital
 | gemini-cli-agent | `SteveDigital Projects/gemini-cli-agent` | Gemini CLI agent extensions |
 | kimi-cli | `SteveDigital Projects/kimi-cli` | Kimi/Moonshot CLI agent |
 | qwen-code | `SteveDigital Projects/qwen-code` | Qwen Code CLI agent |
+| qwen-obsidian (in PAL) | `private-agent-library/qwen-obsidian` | Recovered Qwen RAG/wiki/git companion with specialist RAG integration |
+| pi-mono | `https://github.com/badlogic/pi-mono.git` / `https://github.com/earendil-works/pi-mono` | Pi coding-agent source reference; not yet checked out on Claudia |
+| pi-specialist-harnesses (in PAL) | `private-agent-library/workflows/pi-specialist-harnesses` | Recovered Pi prompt-harness mappings for specialist workflows |
 | oh-my-openagent | `SteveDigital Projects/oh-my-openagent` | OpenAgent configuration framework |
 | devops-cli-bundle | `SteveDigital Projects/devops-cli-bundle` | DevOps CLI tools bundle |
 | superpowers | `/mnt/DATA/Git/superpowers` | Agent superpowers toolkit |
@@ -120,6 +123,7 @@ All repos live under `/mnt/DATA/Git/` — either at root or inside `SteveDigital
 | harmony-turboquant | `SteveDigital Projects/harmony-turboquant` | TurboQuant quantization research |
 | AutoGPT | `/mnt/DATA/Git/AutoGPT` | AutoGPT fork/reference (8597 commits) |
 | pi-multi-pass (in PAL) | `private-agent-library/pi-multi-pass` | Pi multi-pass research harness |
+| specialist RAG databases (in PAL) | `private-agent-library/registry/specialists` | Domain SQLite RAG databases recovered from Thoth/PAL work, including Raspberry Pi |
 
 ---
 
@@ -238,6 +242,8 @@ All repos live under `/mnt/DATA/Git/` — either at root or inside `SteveDigital
 ---
 
 ## Notes
+
+- Third-party repo preservation policy: leave `origin` pointing at the original upstream, add/use a SteveDigital fork remote for local preservation branches, and push only Steve-local deltas. See `fleet-ops/FLEET_FORK_PROTOCOL.md`.
 
 - `SteveDigital Projects/` = `/mnt/DATA/Git/SteveDigital Projects/` — 101 GitHub-synced repos
 - Vessel repos (`vessel-*`) at `/mnt/DATA/Git/vessel-*/` are bare dirs, not yet git-initialized

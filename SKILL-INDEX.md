@@ -1,6 +1,6 @@
 # Skill Index - The Nexus
 
-**Last Updated:** 2026-06-06
+**Last Updated:** 2026-07-19
 
 This is the official skill index for the fleet. All agents, vessels, and CLI tools must register their skills here. The Archivist maintains this index and auto-ingests high-confidence usage data.
 
@@ -26,6 +26,14 @@ This is the official skill index for the fleet. All agents, vessels, and CLI too
 
 ### Additional Skills from private-agent-library
 (Full list maintained by the Archivist — see `private-agent-library/registry/skills_index.db` (SQLite FTS5) for the complete skill index, and `private-agent-library/capabilities/library-surface/toolboxes.json` for discipline-based toolbox groupings, served via MCP resource `library://toolboxes`)
+
+### Coding CLI / Local Agent Stack
+- **Gemini CLI** — High-context research, documentation review, specialist RAG design, and Skill Hunter scout lanes. Recovered Thoth session evidence lives under `/Volumes/DATA/GitHub/thoth-cli-agent-data/dot-gemini`.
+- **Qwen / qwen-obsidian** — Historical RAG/wiki/git pipeline; PAL contains `qwen-obsidian` and specialist RAG databases including `registry/specialists/raspberry-pi.db`.
+- **Pi / pi-mono** — Candidate coding-agent lane and prompt-template source. The full `pi-mono` checkout still needs restoration or verification before promoting Pi-derived skills.
+- **Ollama / local Llama-family routes** — Embeddings, local parsing, small coder fallback, and semantic memory support.
+
+Fleet-facing docs: `private-agent-library/docs/ai-cli-orchestration-roster-20260514.md`, `private-agent-library/docs/fleet-ops/LOCAL_ASSISTANT_STACKS.md`, and `private-agent-library/agent-os/pi-edition/README.md`.
 
 ## Onboard Projects, Repos, and Papers Reporting
 All agents and vessels must report:
