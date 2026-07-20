@@ -96,3 +96,4 @@ Root-owned files (no child doc needed):
 - `PROJECT-INDEX.md` — Full categorized project/repo list
 - `SKILL-INDEX.md` — Active skill catalog
 - `TOOLBOX-SYSTEM.md` — Toolbox system reference
+- `docs/RECOVERY-ONBOARDING.md` — Recovered repos, papers, programs, and source evidence to onboard

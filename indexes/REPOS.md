@@ -30,6 +30,10 @@ Full catalog: **[PROJECT-INDEX.md](../PROJECT-INDEX.md)** (~170 repos, categoriz
 | pi-specialist-harnesses | `/Users/digital/clawd/repos/private-agent-library/workflows/pi-specialist-harnesses` | PAL-local recovered Pi prompt harness mappings |
 | Pi Edition install | `/Users/digital/clawd/repos/private-agent-library/agent-os/pi-edition` | Local Raspberry Pi edge-node install path |
 | pi-mono upstream checkout | `/Volumes/DATA/GitHub/pi-mono` | Restored live upstream Pi Agent Harness checkout; `origin` remains `badlogic/pi-mono`, commit `94373d81` |
+| gsd-2 | `/Volumes/DATA/GitHub/gsd-2` | Pi/agent coding-stack source candidate; compare against PAL and live `pi-mono` |
+| pi-autoresearch | `/Volumes/DATA/GitHub/pi-autoresearch` | Local Pi autoresearch checkout; PAL also has a historical gitlink placeholder |
+| skill-miner-candidates | `/Volumes/DATA/GitHub/skill-miner-candidates` | Recovered skill candidate corpus; local graph commit `4b5c0384`, remote currently unresolved |
+| thoth-cli-agent-data | `/Volumes/DATA/GitHub/thoth-cli-agent-data` | Transferred CLI session stores for Gemini, Qwen, Claude, Codex, OpenCode, and OpenClaw; index summaries only |
 | project-cerberus | `/Users/digital/clawd/project-cerberus` | |
 | med-suite | `/Users/digital/clawd/skills/med-suite` | Active skill — not in SteveDigital-Dev GitHub |
 | xo-modelfiles | `/Users/digital/clawd/xo-modelfiles` | Claudia-local Modelfiles |

@@ -90,6 +90,18 @@ Fleet coding-agent documentation lives in PAL:
 
 Recovered Thoth session evidence: Gemini built PAL specialist RAG enhancements on 2026-05-05 (hybrid search/RRF, paper harvesting, semantic routing, Specialist Layer 8, local Ollama support), with preserved PAL commits `574f8f727` and `6ea451a8c`. Claude Code has 178 recovered JSONL transcript/session files under `dot-claude`, including substantial Thoth/Nexus/PAL fleet-maintenance sessions from June 2026. Codex CLI has 5 dated sessions under `dot-codex`, including Docker/docs work for `executive_agents` and Ollama smoke checks. Pi/pi-mono prompt harnesses are documented, and the live upstream `pi-mono` checkout has been restored at `/Volumes/DATA/GitHub/pi-mono` for comparison against PAL historical graph evidence and `gsd-2`.
 
+## Recovery Onboarding Anchors
+
+| Anchor | Path | Use |
+|---|---|---|
+| `skill-miner-candidates` | `/Volumes/DATA/GitHub/skill-miner-candidates` | Recovered skill drafts and graph output; remote needs resolution before push |
+| PAL specialist RAGs | `~/clawd/repos/private-agent-library/registry/specialists` | 21 specialist DBs for routing, research, and source discovery |
+| `qwen-obsidian` | `~/clawd/repos/private-agent-library/qwen-obsidian` | Wiki/RAG/git companion with specialist RAG integration |
+| Pi specialist harnesses | `~/clawd/repos/private-agent-library/workflows/pi-specialist-harnesses` | 14 workflow-to-Pi prompt harness mappings |
+| Thoth CLI session sources | `/Volumes/DATA/GitHub/thoth-cli-agent-data` | Source evidence for recovered Gemini/Qwen/Claude/Codex/OpenCode/OpenClaw work |
+
+See [../docs/RECOVERY-ONBOARDING.md](../docs/RECOVERY-ONBOARDING.md) for the current onboarding queue.
+
 ---
 
 ## Med Suite Quick Ref

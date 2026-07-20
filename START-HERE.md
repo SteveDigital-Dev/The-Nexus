@@ -1,5 +1,5 @@
 # The Nexus — START HERE
-**Updated:** 2026-07-19
+**Updated:** 2026-07-20
 
 The Nexus is the central index and control plane for the XO fleet. It does not duplicate data — it points to it.
 
@@ -15,6 +15,7 @@ The Nexus is the central index and control plane for the XO fleet. It does not d
 | Running services & ports | [indexes/SERVICES.md](indexes/SERVICES.md) |
 | Standards & conventions | [FLEET-STANDARD.md](FLEET-STANDARD.md) |
 | Recovered Gemini/Pi coding stack | [indexes/SKILLS.md#coding-cli--local-agent-stack](indexes/SKILLS.md#coding-cli--local-agent-stack) |
+| Recovered repos, papers, and programs to onboard | [docs/RECOVERY-ONBOARDING.md](docs/RECOVERY-ONBOARDING.md) |
 | Vision & direction | [VISION.md](VISION.md) |
 
 ---

@@ -1,6 +1,6 @@
 # Project Index
 
-**Last Updated:** 2026-07-19
+**Last Updated:** 2026-07-20
 **Total repos:** ~170 (130 SteveDigital-Dev GitHub + ~40 local/external)
 **Maintained by:** The Archivist / Aria
 
@@ -70,6 +70,9 @@ All repos live under `/mnt/DATA/Git/` — either at root or inside `SteveDigital
 | qwen-obsidian (in PAL) | `private-agent-library/qwen-obsidian` | Recovered Qwen RAG/wiki/git companion with specialist RAG integration |
 | pi-mono | `https://github.com/badlogic/pi-mono.git` / `https://github.com/earendil-works/pi-mono` | Pi coding-agent source reference; not yet checked out on Claudia |
 | pi-specialist-harnesses (in PAL) | `private-agent-library/workflows/pi-specialist-harnesses` | Recovered Pi prompt-harness mappings for specialist workflows |
+| gsd-2 | `/Volumes/DATA/GitHub/gsd-2` | Pi/agent coding-stack source candidate related to recovered `pi-mono` evidence |
+| pi-autoresearch | `/Volumes/DATA/GitHub/pi-autoresearch` | Local Pi autoresearch checkout; compare with PAL gitlink placeholder |
+| skill-miner-candidates | `/Volumes/DATA/GitHub/skill-miner-candidates` | Recovered skill candidate corpus; local graph commit exists, GitHub remote unresolved |
 | oh-my-openagent | `SteveDigital Projects/oh-my-openagent` | OpenAgent configuration framework |
 | devops-cli-bundle | `SteveDigital Projects/devops-cli-bundle` | DevOps CLI tools bundle |
 | superpowers | `/mnt/DATA/Git/superpowers` | Agent superpowers toolkit |
@@ -100,6 +103,7 @@ All repos live under `/mnt/DATA/Git/` — either at root or inside `SteveDigital
 | agent-vaults | `/mnt/DATA/Git/agent-vaults` | Agent Obsidian vaults root; GitHub: `SteveDigital-Dev/agent-vaults` |
 | claude-obsidian | `SteveDigital Projects/claude-obsidian` | Claude-specific Obsidian vault |
 | gemini-obsidian | `SteveDigital Projects/gemini-obsidian` | Gemini Obsidian vault |
+| thoth-cli-agent-data | `/Volumes/DATA/GitHub/thoth-cli-agent-data` | Transferred CLI session stores for Gemini, Qwen, Claude, Codex, OpenCode, and OpenClaw; source evidence only |
 | hawk-obsidian | `SteveDigital Projects/hawk-obsidian` | Hawk agent Obsidian vault |
 | cipher-obsidian | `SteveDigital Projects/cipher-obsidian` | Cipher agent Obsidian vault |
 | claude-mem | `/mnt/DATA/Git/claude-mem` | Claude memory system (6 commits) |

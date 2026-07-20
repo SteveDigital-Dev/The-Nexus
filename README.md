@@ -11,6 +11,7 @@ Central title, index, and knowledge hub for the fleet and Agent OS.
 | [FLEET-STANDARD.md](FLEET-STANDARD.md) | Naming conventions, vessel index rules, Kanban, onboarding |
 | [VISION.md](VISION.md) | Direction, Agent OS philosophy, Archivist role |
 | [START-HERE.md](START-HERE.md) | Onboarding entry point for new vessels/agents |
+| [docs/RECOVERY-ONBOARDING.md](docs/RECOVERY-ONBOARDING.md) | Recovered repos, papers, programs, and source evidence to onboard |
 
 ### Per-Vessel & Service Detail (`indexes/`)
 
@@ -28,3 +29,4 @@ Central title, index, and knowledge hub for the fleet and Agent OS.
 - **Orchestrator:** Hermes on sdigits, profile `nirto5-1` for Windows GPU node
 - **Skills/models/dashboards:** `private-agent-library/`
 - **Per-vessel submodules:** `fleet-ops/`
+- **Recovered source anchors:** see [docs/RECOVERY-ONBOARDING.md](docs/RECOVERY-ONBOARDING.md)

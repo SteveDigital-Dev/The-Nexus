@@ -1,5 +1,5 @@
 # Fleet Services Index
-**Updated:** 2026-06-10 | Authoritative detail: `fleet-ops/<vessel>/system/SERVICES.md`
+**Updated:** 2026-07-20 | Authoritative detail: `fleet-ops/<vessel>/system/SERVICES.md`
 
 ---
 
@@ -129,3 +129,15 @@ sleep 3 && tail -5 /tmp/openclaw/openclaw-$(date +%Y-%m-%d).log
 ```bash
 lsof -p $(pgrep -f "openclaw.*gateway") | wc -l    # >9000 = problem
 ```
+
+---
+
+## Program Anchors
+
+| Program | Path / command | Role |
+|---|---|---|
+| Graphify / `graphifyy` | local CLI; per-repo `graphify-out/`; global graph at `/Users/digital/.graphify/global-graph.json` | Project topology and recovery graphing |
+| `fleet-pull` | `~/bin/fleet-pull`; canonical `fleet-ops/bin/fleet-pull` | Fleet repo sync |
+| Kokoro TTS | `~/.openclaw/skills/kokoro-tts` | Claudia voice output; use skill script directly |
+| Med Suite | `med serve` / `~/clawd/skills/med-suite` | Clinical RAG dashboard and drug interaction checker |
+| Ollama / InfraOps models | `127.0.0.1:11434`; PAL `models/infraops-*` | Local inference and fleet operations model lane |
