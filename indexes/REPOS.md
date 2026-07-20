@@ -1,5 +1,5 @@
 # Fleet Repository Index
-**Updated:** 2026-07-19
+**Updated:** 2026-07-20
 
 Full catalog: **[PROJECT-INDEX.md](../PROJECT-INDEX.md)** (~170 repos, categorized)
 
@@ -29,6 +29,7 @@ Full catalog: **[PROJECT-INDEX.md](../PROJECT-INDEX.md)** (~170 repos, categoriz
 | qwen-obsidian | `/Users/digital/clawd/repos/private-agent-library/qwen-obsidian` | PAL-local recovered Qwen RAG/wiki companion |
 | pi-specialist-harnesses | `/Users/digital/clawd/repos/private-agent-library/workflows/pi-specialist-harnesses` | PAL-local recovered Pi prompt harness mappings |
 | Pi Edition install | `/Users/digital/clawd/repos/private-agent-library/agent-os/pi-edition` | Local Raspberry Pi edge-node install path |
+| pi-mono upstream checkout | `/Volumes/DATA/GitHub/pi-mono` | Restored live upstream Pi Agent Harness checkout; `origin` remains `badlogic/pi-mono`, commit `94373d81` |
 | project-cerberus | `/Users/digital/clawd/project-cerberus` | |
 | med-suite | `/Users/digital/clawd/skills/med-suite` | Active skill — not in SteveDigital-Dev GitHub |
 | xo-modelfiles | `/Users/digital/clawd/xo-modelfiles` | Claudia-local Modelfiles |

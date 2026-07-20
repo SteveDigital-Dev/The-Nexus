@@ -1,5 +1,5 @@
 # Fleet Skills Index
-**Updated:** 2026-07-19
+**Updated:** 2026-07-20
 
 XO skills live in two places:
 - **`~/clawd/skills/`** — Active skills running on Claudia
@@ -88,7 +88,7 @@ Fleet coding-agent documentation lives in PAL:
 - `docs/agent-orchestration/herdr-pi-llama-setup.md` — Herdr cockpit setup for Pi, Codex, OpenCode, Hermes, Ollama, and local/remote agent panes.
 - `agent-os/pi-edition/README.md` — local Raspberry Pi edge-node install path.
 
-Recovered Thoth session evidence: Gemini built PAL specialist RAG enhancements on 2026-05-05 (hybrid search/RRF, paper harvesting, semantic routing, Specialist Layer 8, local Ollama support), with preserved PAL commits `574f8f727` and `6ea451a8c`. Claude Code has 178 recovered JSONL transcript/session files under `dot-claude`, including substantial Thoth/Nexus/PAL fleet-maintenance sessions from June 2026. Codex CLI has 5 dated sessions under `dot-codex`, including Docker/docs work for `executive_agents` and Ollama smoke checks. Pi/pi-mono prompt harnesses are documented, but the full `pi-mono` checkout still needs restoration or verification before active promotion.
+Recovered Thoth session evidence: Gemini built PAL specialist RAG enhancements on 2026-05-05 (hybrid search/RRF, paper harvesting, semantic routing, Specialist Layer 8, local Ollama support), with preserved PAL commits `574f8f727` and `6ea451a8c`. Claude Code has 178 recovered JSONL transcript/session files under `dot-claude`, including substantial Thoth/Nexus/PAL fleet-maintenance sessions from June 2026. Codex CLI has 5 dated sessions under `dot-codex`, including Docker/docs work for `executive_agents` and Ollama smoke checks. Pi/pi-mono prompt harnesses are documented, and the live upstream `pi-mono` checkout has been restored at `/Volumes/DATA/GitHub/pi-mono` for comparison against PAL historical graph evidence and `gsd-2`.
 
 ---
 
