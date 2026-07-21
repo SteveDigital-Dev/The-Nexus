@@ -1,6 +1,6 @@
 # Fleet Index
 
-**Last Updated:** 2026-06-18  
+**Last Updated:** 2026-07-21
 **Maintained by:** The Archivist / Aria  
 **Purpose:** Topology overview — IPs, roles, models, Hermes profiles, cross-repo links  
 **Per-vessel detail:** `indexes/VESSELS.md` · `indexes/SERVICES.md`
@@ -42,7 +42,7 @@
 ### thoth — Control Plane / Hermes Gateway
 - **Device:** HP mt41 Mobile Thin Client · AMD Radeon HD 7420G
 - **Role:** Hermes gateway, RAG/DB host, lightweight always-on control plane
-- **Services:** Hermes gateway, ChromaDB :8000, Ollama :11434, Portainer-agent :9001, file-server :8090, Docker
+- **Services:** Hermes gateway, Coms-Net :8888, ChromaDB :8000, Ollama :11434, Portainer-agent :9001, file-server :8090, Docker
 - **SSH:** `ssh thoth` (user: `sdigits`)
 - **Hermes profile:** *(not yet wired)*
 - **Fleet profile:** `vessel-thoth/profile.json`
@@ -127,6 +127,7 @@ Full repo catalog: [PROJECT-INDEX.md](PROJECT-INDEX.md)
 |-----------|-----------|------|
 | Fleet Command | `private-agent-library/dashboards/fleet-command/` | static JS payload |
 | Fleet Code IDE | `private-agent-library/dashboards/fleet-code-ide/index.html` | fetch-poll `status.json` (30s) |
+| Coms-Net docs | `http://thoth:8090/fleet/comms/` | PAL fleet comms docs; API health at `http://thoth:8888/health` |
 | Knowledge Graph 3D | `private-agent-library/dashboards/knowledge-graph-3d/` | static |
 | Thoth Dashboard | `http://thoth:8002` | FastAPI + React SPA |
 

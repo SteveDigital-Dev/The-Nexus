@@ -1,5 +1,5 @@
 # Fleet Services Index
-**Updated:** 2026-07-20 | Authoritative detail: `fleet-ops/<vessel>/system/SERVICES.md`
+**Updated:** 2026-07-21 | Authoritative detail: `fleet-ops/<vessel>/system/SERVICES.md`
 
 ---
 
@@ -72,13 +72,17 @@ ollama list                       # Model inventory
 | 11434 | Ollama | Local inference (CPU) |
 | 8000 | ChromaDB | Vector RAG store (Docker) |
 | 8002 | Dashboard | FastAPI + React SPA |
+| 8888 | Coms-Net | Fleet agent registry/message hub; authenticated API, local CLI under PAL `fleet/comms/coms-net-python` |
 | 8090 | file-server | Static file serving |
 | 9001 | Portainer agent | Docker management |
 
 ```bash
 ssh thoth "systemctl --user status hermes"    # Hermes gateway
+curl http://thoth:8888/health                 # Coms-Net health
 docker ps                                      # Running containers
 ```
+
+Coms-Net source docs are served from `http://thoth:8090/fleet/comms/`. Runtime code lives on Thoth at `/mnt/DATA/Git/private-agent-library/fleet/comms/coms-net-python`; broker metadata is under `/home/sdigits/.hermes/fleet-comms/`. API routes require bearer auth, so keep tokens in local runtime config only.
 
 ---
 
@@ -138,6 +142,7 @@ lsof -p $(pgrep -f "openclaw.*gateway") | wc -l    # >9000 = problem
 |---|---|---|
 | Graphify / `graphifyy` | local CLI; per-repo `graphify-out/`; global graph at `/Users/digital/.graphify/global-graph.json` | Project topology and recovery graphing |
 | `fleet-pull` | `~/bin/fleet-pull`; canonical `fleet-ops/bin/fleet-pull` | Fleet repo sync |
+| Coms-Net | Thoth `:8888`; PAL `fleet/comms/coms-net-python` | Authenticated fleet agent registry, heartbeat, and message broker |
 | Kokoro TTS | `~/.openclaw/skills/kokoro-tts` | Claudia voice output; use skill script directly |
 | Med Suite | `med serve` / `~/clawd/skills/med-suite` | Clinical RAG dashboard and drug interaction checker |
 | Ollama / InfraOps models | `127.0.0.1:11434`; PAL `models/infraops-*` | Local inference and fleet operations model lane |

@@ -1,6 +1,6 @@
 # Recovery Onboarding
 
-**Updated:** 2026-07-20  
+**Updated:** 2026-07-21
 **Purpose:** High-value recovered repos, papers, programs, and session sources that should be visible from Nexus without copying raw payloads into Nexus.
 
 Nexus points to authoritative sources. Do not bulk-copy session stores, PDFs, RAG databases, or generated graph databases here.
@@ -16,6 +16,7 @@ Nexus points to authoritative sources. Do not bulk-copy session stores, PDFs, RA
 | `qwen-obsidian` | `/Users/digital/clawd/repos/private-agent-library/qwen-obsidian` | Recovered wiki/RAG/git companion with specialist-RAG integration | Keep indexed through PAL; promote only durable operating docs |
 | Paper corpus evidence | PAL paper/RAG metadata and transferred session summaries | Historical snapshot records 1,133 papers / 114,227 chunks on Thoth | Preserve metadata and source paths; avoid committing raw PDFs to Nexus |
 | Graphify recovery map | `/Users/digital/.graphify/global-graph.json`, `~/clawd/tmp/graphify-targets/` | Broad project map and targeted recovery output | Keep global graph local; commit per-repo `graphify-out` only where appropriate |
+| Coms-Net fleet message fabric | Thoth `http://thoth:8888/health`; docs at `http://thoth:8090/fleet/comms/`; code at `/mnt/DATA/Git/private-agent-library/fleet/comms/coms-net-python` | Live fleet agent registry/message broker; Claudia can register and inspect broker state through Thoth local CLI | Promote source docs into PAL/Nexus pointers; keep bearer tokens and auth files out of Nexus |
 | Vessel coverage gaps | `fleet-ops/nirto5-1/`, `fleet-ops/dj/` | `nirto5-1` lacks system PROJECTS/REPOS/PAPERS/SERVICES coverage; `dj` lacks REPOS/PAPERS | Survey or reconstruct from known fleet docs |
 
 ## Program Anchors
@@ -25,6 +26,7 @@ Nexus points to authoritative sources. Do not bulk-copy session stores, PDFs, RA
 | Graphify / `graphifyy` | Local CLI and per-repo `graphify-out/` | Codebase topology and recovery map |
 | `fleet-pull` | `fleet-ops/bin/fleet-pull`, `~/bin/fleet-pull` | Fleet sync entry point |
 | OpenClaw gateway | `~/.openclaw/openclaw.json`, LaunchAgent `ai.openclaw.gateway` | Telegram/OpenClaw runtime |
+| Coms-Net | Thoth `:8888`, PAL `fleet/comms/coms-net-python`, broker metadata at `/home/sdigits/.hermes/fleet-comms/broker.sqlite3` | Authenticated fleet agent comms, registry, heartbeats, and message inbox/outbox checks |
 | Kokoro TTS | `~/.openclaw/skills/kokoro-tts` | Voice output path for Claudia |
 | Ollama / InfraOps models | Claudia Ollama `:11434`, PAL model files | Local inference and fleet-ops model lane |
 | Med Suite | `~/clawd/skills/med-suite` | Clinical RAG and dashboard service |
@@ -33,5 +35,6 @@ Nexus points to authoritative sources. Do not bulk-copy session stores, PDFs, RA
 
 - Prefer a short Nexus pointer plus authoritative source path over copied content.
 - Do not ingest raw credentials, auth configs, or full session dumps into Nexus.
+- For Coms-Net, document routes and commands only; never store bearer tokens or token-file contents here.
 - For third-party repos, keep `origin` pointed upstream and preserve Steve-local deltas on SteveDigital fork branches.
 - For large generated artifacts, prefer per-repo `graphify-out` commits over the global graph database.
