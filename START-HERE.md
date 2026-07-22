@@ -1,6 +1,8 @@
 # The Nexus — START HERE
 **Updated:** 2026-07-20
 
+Legacy note: `docs/START_HERE.md` is a rescued Nitro-era page kept for historical reference. On `dj` and other current vessels, use this root `START-HERE.md` as the authoritative onboarding entry point.
+
 The Nexus is the central index and control plane for the XO fleet. It does not duplicate data — it points to it.
 
 ---

@@ -1,36 +1,36 @@
-# fleet-pull.ps1
+﻿# fleet-pull.ps1
 # Git pull across all fleet repos registered in The Nexus.
 # Run from any directory: powershell -ExecutionPolicy Bypass -File fleet-pull.ps1
 
 $repos = @(
     # Core control-plane and execution
-    "D:\GitHub\agent-os",
-    "D:\GitHub\cli-engine",
-    "D:\GitHub\studio-fleet",
-    "D:\GitHub\fleet-ops",
-    "D:\GitHub\project-cerberus",
+    "X:\GitHub\agent-os",
+    "X:\GitHub\cli-engine",
+    "X:\GitHub\studio-fleet",
+    "X:\GitHub\fleet-ops",
+    "X:\GitHub\project-cerberus",
 
     # Knowledge / skills / discovery
-    "D:\GitHub\clihub",
-    "D:\GitHub\openclaw-master-skills",
-    "D:\GitHub\skills",
-    "D:\GitHub\skills-best-practices",
-    "D:\GitHub\aso-skills",
-    "D:\GitHub\axton-obsidian-visual-skills",
-    "D:\GitHub\threejs-skills",
+    "X:\GitHub\clihub",
+    "X:\GitHub\openclaw-master-skills",
+    "X:\GitHub\skills",
+    "X:\GitHub\skills-best-practices",
+    "X:\GitHub\aso-skills",
+    "X:\GitHub\axton-obsidian-visual-skills",
+    "X:\GitHub\threejs-skills",
 
     # Research / R&D
-    "D:\GitHub\AI-Scientist",
-    "D:\GitHub\autoresearch",
-    "D:\GitHub\quorum",
+    "X:\GitHub\AI-Scientist",
+    "X:\GitHub\autoresearch",
+    "X:\GitHub\quorum",
 
     # Creative / generation vessels
-    "D:\GitHub\ComfyUI",
-    "D:\GitHub\ComfyUI-OpenClaw",
-    "D:\GitHub\mesh2motion-app",
+    "X:\GitHub\ComfyUI",
+    "X:\GitHub\ComfyUI-OpenClaw",
+    "X:\GitHub\mesh2motion-app",
 
     # Meta-gen pipeline
-    "D:\GitHub\meta-gen"
+    "X:\GitHub\meta-gen"
 )
 
 $results = @()
