@@ -12,7 +12,7 @@
 | Vessel | OS | CPU | RAM | Tailscale IP | Status |
 |--------|-----|-----|-----|--------------|--------|
 | sdigits | Arch Linux (Omarchy 3.3.3) | Intel i5-8250U (4C/8T) | 7.7 GB | 100.87.124.62 | ONLINE |
-| claudia | macOS 15.x | Apple M4 (10-core) | 32 GB unified | 100.93.100.37 | ONLINE |
+| claudia | macOS 26.5 | Apple M4 (10-core) | 32 GB unified | 100.93.100.37 | ONLINE |
 | thoth | Linux Mint 22.3 | AMD A4-4300M (2C/2T) | 7.0 GB | 100.72.231.127 | ONLINE |
 | nirto5-1 | Windows 11 | Intel i5-9300H (4C/8T) | 24 GB | 100.124.34.87 | ONLINE |
 | mintbookpro | Linux Mint 22.3 | Intel i5-3210M (2C/4T) | 15.5 GB | 100.103.62.96 | ONLINE |

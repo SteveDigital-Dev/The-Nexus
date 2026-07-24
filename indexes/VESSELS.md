@@ -14,7 +14,7 @@
 |-------|-------|
 | Hostname | `Stevens-Mac-mini-2.local` |
 | Tailscale | `stevens-mac-mini` · `100.93.100.37` |
-| OS | macOS 15.x (Darwin) |
+| OS | macOS 26.5 (Darwin 25.5.0, build 25F71) |
 | CPU | Apple M4 (ARM64, 10-core 8P+2E) |
 | GPU | Apple M4 GPU (10-core, integrated, Metal) — 25GB unified memory |
 | Storage | Internal 228GB (~94% full) · External DATA 1.8TB (640GB free) |
